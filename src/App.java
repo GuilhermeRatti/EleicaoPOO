@@ -1,9 +1,13 @@
 import java.io.FileInputStream;
+import java.text.NumberFormat;
+import java.time.format.DateTimeFormatter;
+import java.time.LocalDate;
 import java.util.ArrayList;
+import java.util.HashMap;
 import java.util.List;
+import java.util.Locale;
 import java.util.Map;
 import java.util.Scanner;
-
 
 public class App {
     public static void main(String[] args) throws Exception {
@@ -21,20 +25,22 @@ public class App {
         colsArqCand.add("\"NM_TIPO_DESTINACAO_VOTOS\"");
         // Colocar colunas que nos vamos ler do csv
         Eleicao eleicao = new Eleicao();
-        
+
         // LE E REGISTRA OS CANDIDATOS E PARTIDOS
         ReadFile("files/consulta_cand_2022_ES.csv", colsArqCand, eleicao);
-        
+
         List<String> colsArqVot = new ArrayList<String>();
         colsArqVot.add("\"CD_CARGO\"");
         colsArqVot.add("\"NR_VOTAVEL\"");
         colsArqVot.add("\"QT_VOTOS\"");
 
-        // LE E REGISTRA OS VOTOS DE CADA CANDIDATO/PARTIDO POR SEÇÃO ELEITORAL (SIM ISSO EH A SEÇÃO ELEITORAL)
-        ReadFile("files/votacao_secao_2022_ES.csv", colsArqVot, eleicao);
+        // LE E REGISTRA OS VOTOS DE CADA CANDIDATO/PARTIDO POR SEÇÃO ELEITORAL (SIM
+        // ISSO EH A SEÇÃO ELEITORAL)
+        //ReadFile("files/votacao_secao_2022_ES.csv", colsArqVot, eleicao);
     }
 
-    // Separei a leitura do arquivo em uma funcao separada pq a gente usa ela em 2 arquivos diferentes e fica mais organizado
+    // Separei a leitura do arquivo em uma funcao separada pq a gente usa ela em 2
+    // arquivos diferentes e fica mais organizado
     public static void ReadFile(String Path, List<String> colsToRead, Eleicao eleicao) {
         CsvReader Reader = new CsvReader(colsToRead, ";");
 
@@ -44,31 +50,46 @@ public class App {
 
             Reader.setHeaders(colunas); // FUNCAO QUE ASSOCIA O INDICE DE CADA COLUNA COM O NOME DELAS
 
-            System.out.println("Lendo arquivo " + Path.split(";")[-1] + "...");
+            System.out.println("Lendo arquivo " + Path.split(";")[Path.split(";").length - 1] + "...");
+            Locale brLocale = Locale.forLanguageTag("pt-BR");
+            NumberFormat nf = NumberFormat.getInstance(brLocale);
+            HashMap<String, Object> lineDataConverted = new HashMap<String, Object>();
 
-            while(scanner.hasNextLine()) {
+            while (scanner.hasNextLine()) {
                 String linha = scanner.nextLine();
-                Map<String,String> lineData = Reader.getLineData(linha);
-                // ######################################################
-                // ##### LEMBRETE DAVID: FAZER CONVERSAO DAS COLUNAS ####
-                // ## PROCESSADAS ACIMA... ELAS ESTAO NO MAP, A CHAVE ###
-                // ### EH O NOME DA COL E O VAL EH A STRING P CONVERTER #
-                // ######################################################
+                Map<String, String> lineData = Reader.getLineData(linha);
 
-                // Uma coisa q pensei eh que o nome da coluna sempre comeca com o tipo de dado da variavel...
-                // tipo, NR eh numero, CD eh codigo, NM eh nome, DT eh data, etc...
-                // (Lembrar que a gente colocou o nome da coluna entre "" por causa da formatacao merda)
-                // usar a funcao de string .startsWith() pra ver se a coluna começa com "NR, "CD, "NM, "DT, etc... ex.: .startsWith("\"NR");
-               
-                // Da pra usar um ArrayList<Object> pra armazenar variaveis de diferentes tipos...
-                ArrayList<Object> lineDataConverted = new ArrayList<Object>();
+                for (String s : lineData.keySet()) {
+                    s = removeDoubleQuotes(s);
+                    if (s.startsWith("\"NR") || s.startsWith("\"QT")) {
+                        int valorConvertido = nf.parse(lineData.get(s)).intValue();
+                        lineDataConverted.put(s, valorConvertido);
+                    } else if (s.startsWith("\"DT")) {
+                        LocalDate dataConvertida = LocalDate.parse(lineData.get(s),
+                                DateTimeFormatter.ofPattern("dd/MM/yyyy"));
+                        lineDataConverted.put(s, dataConvertida);
+                    } else {
+                        lineDataConverted.put(s, lineData.get(s));
+                    }
 
-                // Eleicao.buildCandidato / Partido(LineDataConverted) TODO: GUILHERME
+                }
             }
             scanner.close();
-        }
-        catch (Exception e) {
+        } catch (Exception e) {
             e.printStackTrace();
         }
+    }
+
+    public static String removeDoubleQuotes(String input) {
+
+        StringBuilder sb = new StringBuilder();
+
+        char[] tab = input.toCharArray();
+        for (char current : tab) {
+            if (current != '"')
+                sb.append(current);
+        }
+
+        return sb.toString();
     }
 }
