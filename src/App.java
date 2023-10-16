@@ -11,6 +11,8 @@ import java.util.Scanner;
 
 public class App {
     public static void main(String[] args) throws Exception {
+        Eleicao eleicao = new Eleicao(); 
+
         List<String> colsArqCand = new ArrayList<String>();
         colsArqCand.add("\"CD_CARGO\"");
         colsArqCand.add("\"CD_SITUACAO_CANDIDATO_TOT\"");
@@ -23,20 +25,14 @@ public class App {
         colsArqCand.add("\"CD_SIT_TOT_TURNO\"");
         colsArqCand.add("\"CD_GENERO\"");
         colsArqCand.add("\"NM_TIPO_DESTINACAO_VOTOS\"");
-        // Colocar colunas que nos vamos ler do csv
-        Eleicao eleicao = new Eleicao();
-
-        // LE E REGISTRA OS CANDIDATOS E PARTIDOS
-        ReadFile("files/consulta_cand_2022_ES.csv", colsArqCand, eleicao);
 
         List<String> colsArqVot = new ArrayList<String>();
         colsArqVot.add("\"CD_CARGO\"");
         colsArqVot.add("\"NR_VOTAVEL\"");
         colsArqVot.add("\"QT_VOTOS\"");
 
-        // LE E REGISTRA OS VOTOS DE CADA CANDIDATO/PARTIDO POR SEÇÃO ELEITORAL (SIM
-        // ISSO EH A SEÇÃO ELEITORAL)
-        //ReadFile("files/votacao_secao_2022_ES.csv", colsArqVot, eleicao);
+        ReadFile("files/consulta_cand_2022_ES.csv", colsArqCand, eleicao);
+       //ReadFile("files/votacao_secao_2022_ES.csv", colsArqVot, eleicao);
     }
 
     // Separei a leitura do arquivo em uma funcao separada pq a gente usa ela em 2
@@ -71,8 +67,10 @@ public class App {
                     } else {
                         lineDataConverted.put(s, lineData.get(s));
                     }
-
+ 
                 }
+
+                    
             }
             scanner.close();
         } catch (Exception e) {
