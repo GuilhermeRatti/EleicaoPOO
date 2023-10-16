@@ -35,10 +35,23 @@ public class CsvReader {
         String[] colunasArray = colunas.split(this.separador);
         
         for(int i = 0; i < colunasArray.length; i++) {
-            this.headerIndices.put(colunasArray[i], i);
+            this.headerIndices.put(removeDoubleQuotes(colunasArray[i]), i);
         }
 
         System.out.println("Headers setados!\n");
         System.out.println("Lista de headers processados: " + this.headerIndices.keySet()+"\n");
+    }
+
+    public static String removeDoubleQuotes(String input) {
+
+        StringBuilder sb = new StringBuilder();
+
+        char[] tab = input.toCharArray();
+        for (char current : tab) {
+            if (current != '"')
+                sb.append(current);
+        }
+
+        return sb.toString();
     }
 }

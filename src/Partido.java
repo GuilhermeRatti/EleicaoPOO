@@ -1,3 +1,4 @@
+import java.sql.Struct;
 import java.util.ArrayList;
 import java.util.List;
 
@@ -18,5 +19,13 @@ public class Partido {
     public void addCandidato(Candidato cand){
         this.candidatos.add(cand);
         this.quantCand++;
+    }
+
+    @Override
+    public String toString() {
+        
+        String msg = this.sigla;
+        
+        return msg;
     }
 }

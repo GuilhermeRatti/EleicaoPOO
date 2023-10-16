@@ -14,25 +14,27 @@ public class App {
         Eleicao eleicao = new Eleicao(); 
 
         List<String> colsArqCand = new ArrayList<String>();
-        colsArqCand.add("\"CD_CARGO\"");
-        colsArqCand.add("\"CD_SITUACAO_CANDIDATO_TOT\"");
-        colsArqCand.add("\"NR_CANDIDATO\"");
-        colsArqCand.add("\"NM_URNA_CANDIDATO\"");
-        colsArqCand.add("\"NR_PARTIDO\"");
-        colsArqCand.add("\"SG_PARTIDO\"");
-        colsArqCand.add("\"NR_FEDERACAO\"");
-        colsArqCand.add("\"DT_NASCIMENTO\"");
-        colsArqCand.add("\"CD_SIT_TOT_TURNO\"");
-        colsArqCand.add("\"CD_GENERO\"");
-        colsArqCand.add("\"NM_TIPO_DESTINACAO_VOTOS\"");
+        colsArqCand.add("CD_CARGO");
+        colsArqCand.add("CD_SITUACAO_CANDIDATO_TOT");
+        colsArqCand.add("NR_CANDIDATO");
+        colsArqCand.add("NM_URNA_CANDIDATO");
+        colsArqCand.add("NR_PARTIDO");
+        colsArqCand.add("SG_PARTIDO");
+        colsArqCand.add("NR_FEDERACAO");
+        colsArqCand.add("DT_NASCIMENTO");
+        colsArqCand.add("CD_SIT_TOT_TURNO");
+        colsArqCand.add("CD_GENERO");
+        colsArqCand.add("NM_TIPO_DESTINACAO_VOTOS");
 
         List<String> colsArqVot = new ArrayList<String>();
-        colsArqVot.add("\"CD_CARGO\"");
-        colsArqVot.add("\"NR_VOTAVEL\"");
-        colsArqVot.add("\"QT_VOTOS\"");
+        colsArqVot.add("CD_CARGO");
+        colsArqVot.add("NR_VOTAVEL");
+        colsArqVot.add("QT_VOTOS");
 
         ReadFile("files/consulta_cand_2022_ES.csv", colsArqCand, eleicao);
        //ReadFile("files/votacao_secao_2022_ES.csv", colsArqVot, eleicao);
+
+       eleicao.printCandidatos();
     }
 
     // Separei a leitura do arquivo em uma funcao separada pq a gente usa ela em 2
@@ -56,21 +58,19 @@ public class App {
                 Map<String, String> lineData = Reader.getLineData(linha);
 
                 for (String s : lineData.keySet()) {
-                    s = removeDoubleQuotes(s);
-                    if (s.startsWith("\"NR") || s.startsWith("\"QT")) {
-                        int valorConvertido = nf.parse(lineData.get(s)).intValue();
+                    if (s.startsWith("NR") || s.startsWith("QT") || s.startsWith("CD")) {
+                        int valorConvertido = nf.parse(removeDoubleQuotes(lineData.get(s))).intValue();
                         lineDataConverted.put(s, valorConvertido);
-                    } else if (s.startsWith("\"DT")) {
-                        LocalDate dataConvertida = LocalDate.parse(lineData.get(s),
+                    } else if (s.startsWith("DT")) {
+                        LocalDate dataConvertida = LocalDate.parse(removeDoubleQuotes(lineData.get(s)),
                                 DateTimeFormatter.ofPattern("dd/MM/yyyy"));
                         lineDataConverted.put(s, dataConvertida);
                     } else {
-                        lineDataConverted.put(s, lineData.get(s));
+                        lineDataConverted.put(s, removeDoubleQuotes(lineData.get(s)));
                     }
- 
                 }
-
-                    
+                
+                eleicao.registraLinha(lineDataConverted);    
             }
             scanner.close();
         } catch (Exception e) {
