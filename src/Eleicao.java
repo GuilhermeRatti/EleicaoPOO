@@ -6,7 +6,7 @@ import java.util.Map;
 
 public class Eleicao {
     private Map<String, Partido> partidos = new HashMap<String, Partido>();
-    private List<Candidato> totalCandidatos = new ArrayList<Candidato>();
+    private Map<Integer, Candidato> totalCandidatos = new HashMap<Integer, Candidato>();
     private int numVagas;
     private String estado;
 
@@ -36,9 +36,8 @@ public class Eleicao {
                     (int) linhaConvertida.get("CD_SITUACAO_CANDIDATO_TOT"),
                     pt);
 
-            totalCandidatos.add(candidato);
-            pt.addCandidato(candidato);
-
+            totalCandidatos.put((int) linhaConvertida.get("NR_CANDIDATO"), candidato);
+            pt.addCandidato(candidato, (int) linhaConvertida.get("NR_CANDIDATO"));
 
         } else {
             // registra voto
@@ -47,7 +46,7 @@ public class Eleicao {
 
     public void printCandidatos() {
 
-        for(Candidato c : this.totalCandidatos) {
+        for (Candidato c : this.totalCandidatos.values()) {
             System.out.println(c);
         }
     }

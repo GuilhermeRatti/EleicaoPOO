@@ -1,9 +1,11 @@
 import java.sql.Struct;
 import java.util.ArrayList;
+import java.util.HashMap;
 import java.util.List;
+import java.util.Map;
 
 public class Partido {
-    private List<Candidato> candidatos = new ArrayList<Candidato>();
+    private Map<Integer,Candidato> candidatos = new HashMap<Integer,Candidato>();
     private String sigla;
     private int numPartido;
     private int quantVotos;
@@ -16,8 +18,8 @@ public class Partido {
         this.quantVotos = 0;
     }
 
-    public void addCandidato(Candidato cand){
-        this.candidatos.add(cand);
+    public void addCandidato(Candidato cand, int numCandidato){
+        this.candidatos.put(numCandidato, cand);
         this.quantCand++;
     }
 
