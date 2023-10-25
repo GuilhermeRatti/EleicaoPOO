@@ -1,17 +1,40 @@
+
+import java.io.BufferedReader;
 import java.io.FileInputStream;
+import java.io.InputStreamReader;
 import java.text.NumberFormat;
-import java.time.format.DateTimeFormatter;
 import java.time.LocalDate;
+import java.time.format.DateTimeFormatter;
 import java.util.ArrayList;
-import java.util.HashMap;
 import java.util.List;
 import java.util.Locale;
 import java.util.Map;
-import java.util.Scanner;
+
+enum tipoDeVotos {
+    ESTADUAL, FEDERAL;
+}
 
 public class App {
     public static void main(String[] args) throws Exception {
-        Eleicao eleicao = new Eleicao(); 
+        if (args.length != 4) {
+            throw new Exception("Numero de argumentos invalido");
+        }
+
+        tipoDeVotos tipo;
+        if (args[0].equals("--estadual")) {
+            tipo = tipoDeVotos.ESTADUAL;
+        } else if (args[0].equals("--federal")) {
+            tipo = tipoDeVotos.FEDERAL;
+        } else {
+            throw new Exception("Tipo de votos invalido");
+        }
+
+        String pathCand = args[1];
+        String pathVotos = args[2];
+        
+        LocalDate data = LocalDate.parse(args[3],DateTimeFormatter.ofPattern("dd/MM/yyyy"));
+
+        Eleicao eleicao = new Eleicao(tipo);
 
         List<String> colsArqCand = new ArrayList<String>();
         colsArqCand.add("CD_CARGO");
@@ -31,10 +54,10 @@ public class App {
         colsArqVot.add("NR_VOTAVEL");
         colsArqVot.add("QT_VOTOS");
 
-        ReadFile("files/consulta_cand_2022_ES.csv", colsArqCand, eleicao);
-       //ReadFile("files/votacao_secao_2022_ES.csv", colsArqVot, eleicao);
+        ReadFile(pathCand, colsArqCand, eleicao);
+        ReadFile(pathVotos, colsArqVot, eleicao);
 
-       eleicao.printCandidatos();
+        eleicao.printCandidatos();
     }
 
     // Separei a leitura do arquivo em uma funcao separada pq a gente usa ela em 2
@@ -43,51 +66,24 @@ public class App {
         CsvReader Reader = new CsvReader(colsToRead, ";");
 
         try (FileInputStream file = new FileInputStream(Path)) {
-            Scanner scanner = new Scanner(file);
-            String colunas = scanner.nextLine();
+            InputStreamReader input = new InputStreamReader(file, "ISO-8859-1");
+            BufferedReader buffer = new BufferedReader(input);
 
-            Reader.setHeaders(colunas); // FUNCAO QUE ASSOCIA O INDICE DE CADA COLUNA COM O NOME DELAS
+            Reader.setHeaders(buffer.readLine()); // FUNCAO QUE ASSOCIA O INDICE DE CADA COLUNA COM O NOME DELAS
 
             System.out.println("Lendo arquivo " + Path.split(";")[Path.split(";").length - 1] + "...");
             Locale brLocale = Locale.forLanguageTag("pt-BR");
             NumberFormat nf = NumberFormat.getInstance(brLocale);
-            HashMap<String, Object> lineDataConverted = new HashMap<String, Object>();
 
-            while (scanner.hasNextLine()) {
-                String linha = scanner.nextLine();
-                Map<String, String> lineData = Reader.getLineData(linha);
-
-                for (String s : lineData.keySet()) {
-                    if (s.startsWith("NR") || s.startsWith("QT") || s.startsWith("CD")) {
-                        int valorConvertido = nf.parse(removeDoubleQuotes(lineData.get(s))).intValue();
-                        lineDataConverted.put(s, valorConvertido);
-                    } else if (s.startsWith("DT")) {
-                        LocalDate dataConvertida = LocalDate.parse(removeDoubleQuotes(lineData.get(s)),
-                                DateTimeFormatter.ofPattern("dd/MM/yyyy"));
-                        lineDataConverted.put(s, dataConvertida);
-                    } else {
-                        lineDataConverted.put(s, removeDoubleQuotes(lineData.get(s)));
-                    }
-                }
-                
-                eleicao.registraLinha(lineDataConverted);    
+            String linha = buffer.readLine();
+            while (linha != null) {
+                Map<String, Object> lineData = Reader.getLineData(linha, nf);
+                eleicao.registraLinha(lineData);
+                linha = buffer.readLine();
             }
-            scanner.close();
+
         } catch (Exception e) {
             e.printStackTrace();
         }
-    }
-
-    public static String removeDoubleQuotes(String input) {
-
-        StringBuilder sb = new StringBuilder();
-
-        char[] tab = input.toCharArray();
-        for (char current : tab) {
-            if (current != '"')
-                sb.append(current);
-        }
-
-        return sb.toString();
     }
 }

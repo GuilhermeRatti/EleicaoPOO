@@ -1,3 +1,4 @@
+import java.nio.charset.StandardCharsets;
 import java.time.LocalDate;
 import java.util.ArrayList;
 import java.util.HashMap;
@@ -5,28 +6,59 @@ import java.util.List;
 import java.util.Map;
 
 public class Eleicao {
-    private Map<String, Partido> partidos = new HashMap<String, Partido>();
+    private Map<Integer, Partido> partidos = new HashMap<Integer, Partido>();
     private Map<Integer, Candidato> totalCandidatos = new HashMap<Integer, Candidato>();
     private int numVagas;
     private String estado;
+    private tipoDeVotos tipo;
+
+    public Eleicao(tipoDeVotos tipo) {
+        this.tipo = tipo;
+    }
 
     public void registraLinha(Map<String, Object> linhaConvertida) {
-        if (!((int) linhaConvertida.get("CD_SITUACAO_CANDIDATO_TOT") == 2 ||
-                (int) linhaConvertida.get("CD_SITUACAO_CANDIDATO_TOT") == 16) &&
-                !((String) linhaConvertida.get("NM_TIPO_DESTINACAO_VOTOS")).equals("Válido (legenda)")) {
-            return;
-        }
-
         if (linhaConvertida.size() > 3) {
-            Partido pt = partidos.get((String) linhaConvertida.get("SG_PARTIDO"));
+            if (!((int) linhaConvertida.get("CD_SITUACAO_CANDIDATO_TOT") == 2 ||
+                    (int) linhaConvertida.get("CD_SITUACAO_CANDIDATO_TOT") == 16) &&
+                    !((String) linhaConvertida.get("NM_TIPO_DESTINACAO_VOTOS")).equals("Válido (legenda)"))
+                return;
+
+            if (!(this.tipo == tipoDeVotos.ESTADUAL && (int) linhaConvertida.get("CD_CARGO") == 7 ||
+                    this.tipo == tipoDeVotos.FEDERAL && (int) linhaConvertida.get("CD_CARGO") == 6))
+                return;
+
+            Partido pt = partidos.get((Integer) linhaConvertida.get("NR_PARTIDO"));
             if (pt == null) {
                 Partido partido = new Partido((String) linhaConvertida.get("SG_PARTIDO"),
                         (int) linhaConvertida.get("NR_PARTIDO"));
-                partidos.put((String) linhaConvertida.get("SG_PARTIDO"), partido);
+                partidos.put((Integer) linhaConvertida.get("NR_PARTIDO"), partido);
                 pt = partido;
             }
 
-            Candidato candidato = new Candidato((String) linhaConvertida.get("NM_URNA_CANDIDATO"),
+            Candidato candidato = this.criaCandidato(linhaConvertida, pt);
+            totalCandidatos.put((int) linhaConvertida.get("NR_CANDIDATO"), candidato);
+            pt.addCandidato(candidato, (int) linhaConvertida.get("NR_CANDIDATO"));
+
+        } else if (this.tipo == tipoDeVotos.ESTADUAL && (int) linhaConvertida.get("CD_CARGO") == 7 ||
+                this.tipo == tipoDeVotos.FEDERAL && (int) linhaConvertida.get("CD_CARGO") == 6) {
+
+            Candidato c = this.totalCandidatos.get((int) linhaConvertida.get("NR_VOTAVEL"));
+            if (c != null) {
+                c.registraVotos((int) linhaConvertida.get("QT_VOTOS"));
+            } else {
+                Partido p = this.partidos.get((int) linhaConvertida.get("NR_VOTAVEL"));
+                if (p != null)
+                    p.registraVotos((int) linhaConvertida.get("QT_VOTOS"));
+            }
+        }
+    }
+
+    public Candidato criaCandidato(Map<String, Object> linhaConvertida, Partido pt) {
+        Candidato candidato = null;
+
+        if (((String) linhaConvertida.get("NM_TIPO_DESTINACAO_VOTOS")).equals("Válido (legenda)")) {
+            System.out.println("oioioioioioioi");
+            candidato = new CandidatoLegenda((String) linhaConvertida.get("NM_URNA_CANDIDATO"),
                     (int) linhaConvertida.get("NR_CANDIDATO"),
                     (int) linhaConvertida.get("CD_CARGO"),
                     (int) linhaConvertida.get("NR_FEDERACAO"),
@@ -35,13 +67,19 @@ public class Eleicao {
                     (int) linhaConvertida.get("CD_SIT_TOT_TURNO"),
                     (int) linhaConvertida.get("CD_SITUACAO_CANDIDATO_TOT"),
                     pt);
-
-            totalCandidatos.put((int) linhaConvertida.get("NR_CANDIDATO"), candidato);
-            pt.addCandidato(candidato, (int) linhaConvertida.get("NR_CANDIDATO"));
-
         } else {
-            // registra voto
+            candidato = new CandidatoNominal((String) linhaConvertida.get("NM_URNA_CANDIDATO"),
+                    (int) linhaConvertida.get("NR_CANDIDATO"),
+                    (int) linhaConvertida.get("CD_CARGO"),
+                    (int) linhaConvertida.get("NR_FEDERACAO"),
+                    (LocalDate) linhaConvertida.get("DT_NASCIMENTO"),
+                    (int) linhaConvertida.get("CD_GENERO"),
+                    (int) linhaConvertida.get("CD_SIT_TOT_TURNO"),
+                    (int) linhaConvertida.get("CD_SITUACAO_CANDIDATO_TOT"),
+                    pt);
         }
+
+        return candidato;
     }
 
     public void printCandidatos() {

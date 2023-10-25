@@ -23,6 +23,10 @@ public class Partido {
         this.quantCand++;
     }
 
+    public void registraVotos(int votos){
+        this.quantVotos += votos;
+    }
+
     @Override
     public String toString() {
         
