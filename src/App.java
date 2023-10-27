@@ -1,4 +1,3 @@
-
 import java.io.BufferedReader;
 import java.io.FileInputStream;
 import java.io.InputStreamReader;
@@ -57,9 +56,11 @@ public class App {
         ReadFile("files/votacao_secao_2022_ES.csv", colsArqVot, eleicao);
 
         eleicao.printaNumeroDeVagas();
-        eleicao.ordenaCandidatos();
+        eleicao.printaRelatorio1();
+        eleicao.printaRelatorio2();
         eleicao.printaRelatorio3();
         eleicao.printaRelatorio4();
+        eleicao.printaRelatorio5();
     }
 
     // Separei a leitura do arquivo em uma funcao separada pq a gente usa ela em 2

@@ -92,43 +92,6 @@ public class Eleicao {
         System.out.println("Numero de Vagas: " + this.numeroDeVagas);
     }
 
-    public void printaRelatorio3() {
-        System.out.println(
-                "Teriam sido eleitos se a votação fosse majoritária, e não foram eleitos:\n(com sua posição no ranking de mais votados)");
-        for (int i = 0; i < this.numeroDeVagas; i++) {
-            if (!this.candidatosOrdenados.get(i).verificaEleito())
-                System.out.println((i + 1) + " - " + this.candidatosOrdenados.get(i));
-        }
-    }
-
-    public void printaRelatorio4() {
-        System.out.println(
-                "Eleitos, que se beneficiaram do sistema proporcional:\n(com sua posição no ranking de mais votados)");
-        int j = 0, i = 0;
-        for (Candidato c : this.candidatosOrdenados) {
-            if (i == numeroDeVagas)
-                break;
-            if (c.verificaEleito()) {
-                i++;
-                if (j >= 30)
-                    System.out.println((j + 1) + " - " + c);
-            }
-            j++;
-        }
-    }
-
-    public void ordenaCandidatos() {
-        List<Candidato> candidatosOrdenados = new ArrayList<Candidato>(this.totalCandidatos.values());
-        candidatosOrdenados.sort(new ComparadorDeCandidato());
-        this.candidatosOrdenados = candidatosOrdenados;
-    }
-
-    public void ordenaPartidos() {
-        List<Partido> partidosOrdenados = new ArrayList<Partido>(this.partidos.values());
-        partidosOrdenados.sort(new ComparadorDePartidos());
-        this.partidosOrdenados = partidosOrdenados;
-    }
-
     public void printaRelatorio1() {
         if (this.candidatosOrdenados == null)
             this.ordenaCandidatos();
@@ -155,5 +118,62 @@ public class Eleicao {
         for (int i = 0; i < this.numeroDeVagas; i++) {
             System.out.println((i+1) + " - " + this.candidatosOrdenados.get(i));
         }
+        System.out.println("");
+    }
+
+    public void printaRelatorio3() {
+        if (this.candidatosOrdenados == null)
+            this.ordenaCandidatos();
+
+        System.out.println(
+                "Teriam sido eleitos se a votação fosse majoritária, e não foram eleitos:\n(com sua posição no ranking de mais votados)");
+        for (int i = 0; i < this.numeroDeVagas; i++) {
+            if (!this.candidatosOrdenados.get(i).verificaEleito())
+                System.out.println((i + 1) + " - " + this.candidatosOrdenados.get(i));
+        }
+        System.out.println("");
+    }
+
+    public void printaRelatorio4() {
+        if (this.candidatosOrdenados == null)
+            this.ordenaCandidatos();
+
+        System.out.println(
+                "Eleitos, que se beneficiaram do sistema proporcional:\n(com sua posição no ranking de mais votados)");
+        int j = 0, i = 0;
+        for (Candidato c : this.candidatosOrdenados) {
+            if (i == numeroDeVagas)
+                break;
+            if (c.verificaEleito()) {
+                i++;
+                if (j >= 30)
+                    System.out.println((j + 1) + " - " + c);
+            }
+            j++;
+        }
+        System.out.println("");
+    }
+
+    public void printaRelatorio5() {
+        if(this.partidosOrdenados==null)
+            this.ordenaPartidos();
+        
+        int i = 0;
+        for(Partido p : this.partidosOrdenados) {
+            System.out.println((i+1) + " - " + p);
+            i++;
+        }
+    }
+
+    public void ordenaCandidatos() {
+        List<Candidato> candidatosOrdenados = new ArrayList<Candidato>(this.totalCandidatos.values());
+        candidatosOrdenados.sort(new ComparadorDeCandidato());
+        this.candidatosOrdenados = candidatosOrdenados;
+    }
+
+    public void ordenaPartidos() {
+        List<Partido> partidosOrdenados = new ArrayList<Partido>(this.partidos.values());
+        partidosOrdenados.sort(new ComparadorDePartidos());
+        this.partidosOrdenados = partidosOrdenados;
     }
 }
