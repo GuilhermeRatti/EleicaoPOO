@@ -170,15 +170,15 @@ public class Eleicao {
     }
 
     public void printaRelatorio5() {
-        if (this.partidosOrdenados == null)
+        System.out.println("Votaçao dos partidos e número de candidatos eleitos:");
+        if(this.partidosOrdenados==null)
             this.ordenaPartidos();
-
+            
         int i = 0;
         for (Partido p : this.partidosOrdenados) {
             System.out.println((i + 1) + " - " + p);
             i++;
         }
-        System.out.println("");
     }
 
     public void ordenaCandidatos() {
