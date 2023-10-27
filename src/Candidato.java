@@ -68,7 +68,7 @@ public abstract class Candidato {
     @Override
     public String toString() {
         String msg = this.nomeUrna + 
-                    "(" + this.partido.getSigla() + ", " +
+                    " (" + this.partido.getSigla() + ", " +
                     String.format("%,d",this.qtdVotos).replace(',', '.') + " votos)";
         return msg;
     }
@@ -77,6 +77,6 @@ public abstract class Candidato {
 class ComparadorDeCandidato implements java.util.Comparator<Candidato> {
     @Override
     public int compare(Candidato arg0, Candidato arg1) {
-        return arg0.getQtdVotos() - arg1.getQtdVotos();
+        return arg1.getQtdVotos() - arg0.getQtdVotos();
     }
 }
