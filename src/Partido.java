@@ -50,7 +50,7 @@ public class Partido {
     public String toString() {
         String msg = this.sigla + " - " + this.numPartido + ", " +
                 String.format("%,d", this.qtdVotosLegenda + this.qtdVotosNominais).replace(',', '.') + " votos " +
-                "(" + String.format("%,d", this.qtdVotosNominais).replace(',', '.') + " nominais e " 
+                " (" + String.format("%,d", this.qtdVotosNominais).replace(',', '.') + " nominais e " 
                 + String.format("%,d", this.qtdVotosLegenda).replace(',', '.') + " de legenda), " +
                 this.getQtdCandEleitos() + " candidatos eleitos";
 
@@ -60,7 +60,7 @@ public class Partido {
 
 class ComparadorDePartidos implements java.util.Comparator<Partido> {
     @Override
-    public int compare(Partido agr0, Partido arg1) {
-        return agr0.getQtdTotalDeVotos() - arg1.getQtdTotalDeVotos();
+    public int compare(Partido arg0, Partido arg1) {
+        return arg1.getQtdTotalDeVotos() - arg0.getQtdTotalDeVotos();
     }
 }

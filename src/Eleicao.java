@@ -92,6 +92,31 @@ public class Eleicao {
         System.out.println("Numero de Vagas: " + this.numeroDeVagas);
     }
 
+    public void printaRelatorio3() {
+        System.out.println(
+                "Teriam sido eleitos se a votação fosse majoritária, e não foram eleitos:\n(com sua posição no ranking de mais votados)");
+        for (int i = 0; i < this.numeroDeVagas; i++) {
+            if (!this.candidatosOrdenados.get(i).verificaEleito())
+                System.out.println((i + 1) + " - " + this.candidatosOrdenados.get(i));
+        }
+    }
+
+    public void printaRelatorio4() {
+        System.out.println(
+                "Eleitos, que se beneficiaram do sistema proporcional:\n(com sua posição no ranking de mais votados)");
+        int j = 0, i = 0;
+        for (Candidato c : this.candidatosOrdenados) {
+            if (i == numeroDeVagas)
+                break;
+            if (c.verificaEleito()) {
+                i++;
+                if (j >= 30)
+                    System.out.println((j + 1) + " - " + c);
+            }
+            j++;
+        }
+    }
+
     public void ordenaCandidatos() {
         List<Candidato> candidatosOrdenados = new ArrayList<Candidato>(this.totalCandidatos.values());
         candidatosOrdenados.sort(new ComparadorDeCandidato());

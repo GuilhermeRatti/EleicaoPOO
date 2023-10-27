@@ -15,22 +15,23 @@ enum tipoDeVotos {
 public class App {
     public static void main(String[] args) throws Exception {
         // if (args.length != 4) {
-        //     throw new Exception("Numero de argumentos invalido");
+        // throw new Exception("Numero de argumentos invalido");
         // }
 
         // tipoDeVotos tipo;
         // if (args[0].equals("--estadual")) {
-        //     tipo = tipoDeVotos.ESTADUAL;
+        // tipo = tipoDeVotos.ESTADUAL;
         // } else if (args[0].equals("--federal")) {
-        //     tipo = tipoDeVotos.FEDERAL;
+        // tipo = tipoDeVotos.FEDERAL;
         // } else {
-        //     throw new Exception("Tipo de votos invalido");
+        // throw new Exception("Tipo de votos invalido");
         // }
 
         // String pathCand = args[1];
         // String pathVotos = args[2];
-        
-        // LocalDate data = LocalDate.parse(args[3],DateTimeFormatter.ofPattern("dd/MM/yyyy"));
+
+        // LocalDate data =
+        // LocalDate.parse(args[3],DateTimeFormatter.ofPattern("dd/MM/yyyy"));
 
         Eleicao eleicao = new Eleicao(tipoDeVotos.ESTADUAL);
 
@@ -57,7 +58,8 @@ public class App {
 
         eleicao.printaNumeroDeVagas();
         eleicao.ordenaCandidatos();
-        eleicao.printCandidatos();
+        eleicao.printaRelatorio3();
+        eleicao.printaRelatorio4();
     }
 
     // Separei a leitura do arquivo em uma funcao separada pq a gente usa ela em 2
