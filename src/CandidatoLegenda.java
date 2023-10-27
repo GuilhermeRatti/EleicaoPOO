@@ -14,6 +14,6 @@ public class CandidatoLegenda extends Candidato {
 
     @Override
     public void registraVotos(int votos) {
-        this.getPartido().registraVotos(votos);
+        this.getPartido().registraVotosLegenda(votos);
     }
 }

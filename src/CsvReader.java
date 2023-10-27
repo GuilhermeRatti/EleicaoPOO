@@ -50,7 +50,7 @@ public class CsvReader {
         }
 
         System.out.println("Headers setados!\n");
-        System.out.println("Lista de headers processados: " + this.headerIndices.keySet() + "\n");
+        //System.out.println("Lista de headers processados: " + this.headerIndices.keySet() + "\n");
     }
 
     public static String removeDoubleQuotes(String input) {

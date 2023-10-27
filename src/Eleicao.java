@@ -1,16 +1,13 @@
-import java.nio.charset.StandardCharsets;
 import java.time.LocalDate;
-import java.util.ArrayList;
 import java.util.HashMap;
-import java.util.List;
 import java.util.Map;
 
 public class Eleicao {
     private Map<Integer, Partido> partidos = new HashMap<Integer, Partido>();
     private Map<Integer, Candidato> totalCandidatos = new HashMap<Integer, Candidato>();
-    private int numVagas;
     private String estado;
     private tipoDeVotos tipo;
+    private int numeroDeVagas;
 
     public Eleicao(tipoDeVotos tipo) {
         this.tipo = tipo;
@@ -39,6 +36,11 @@ public class Eleicao {
             totalCandidatos.put((int) linhaConvertida.get("NR_CANDIDATO"), candidato);
             pt.addCandidato(candidato, (int) linhaConvertida.get("NR_CANDIDATO"));
 
+            if ((int) linhaConvertida.get("CD_SIT_TOT_TURNO") == 3 ||
+                    (int) linhaConvertida.get("CD_SIT_TOT_TURNO") == 2) {
+                this.numeroDeVagas++;
+            }
+
         } else if (this.tipo == tipoDeVotos.ESTADUAL && (int) linhaConvertida.get("CD_CARGO") == 7 ||
                 this.tipo == tipoDeVotos.FEDERAL && (int) linhaConvertida.get("CD_CARGO") == 6) {
 
@@ -48,7 +50,7 @@ public class Eleicao {
             } else {
                 Partido p = this.partidos.get((int) linhaConvertida.get("NR_VOTAVEL"));
                 if (p != null)
-                    p.registraVotos((int) linhaConvertida.get("QT_VOTOS"));
+                    p.registraVotosLegenda((int) linhaConvertida.get("QT_VOTOS"));
             }
         }
     }
@@ -57,7 +59,6 @@ public class Eleicao {
         Candidato candidato = null;
 
         if (((String) linhaConvertida.get("NM_TIPO_DESTINACAO_VOTOS")).equals("Válido (legenda)")) {
-            System.out.println("oioioioioioioi");
             candidato = new CandidatoLegenda((String) linhaConvertida.get("NM_URNA_CANDIDATO"),
                     (int) linhaConvertida.get("NR_CANDIDATO"),
                     (int) linhaConvertida.get("CD_CARGO"),
@@ -82,10 +83,34 @@ public class Eleicao {
         return candidato;
     }
 
+    public void printaNumeroDeVagas() {
+        System.out.println("Numero de Vagas: " + this.numeroDeVagas);
+    }
+
     public void printCandidatos() {
 
         for (Candidato c : this.totalCandidatos.values()) {
             System.out.println(c);
         }
+    }
+
+    public void printPartidos() {
+        for (Partido p : this.partidos.values()) {
+            System.out.println(p);
+        }
+    }
+}
+
+class ComparadorDeCandidato implements java.util.Comparator<Candidato> {
+    @Override
+    public int compare(Candidato arg0, Candidato arg1) {
+        return arg0.getQtdVotos() - arg1.getQtdVotos();
+    }
+}
+
+class ComparadorDePartidos implements java.util.Comparator<Partido> {
+    @Override
+    public int compare(Partido agr0, Partido arg1) {
+        return agr0.getQtdTotalDeVotos() - arg1.getQtdTotalDeVotos();
     }
 }

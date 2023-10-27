@@ -15,5 +15,6 @@ public class CandidatoNominal extends Candidato {
     @Override
     public void registraVotos(int votos) {
         this.adicionaVotos(votos);
+        this.getPartido().registraVotosNominais(votos);
     }
 }

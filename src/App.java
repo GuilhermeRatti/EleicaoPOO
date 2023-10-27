@@ -3,8 +3,6 @@ import java.io.BufferedReader;
 import java.io.FileInputStream;
 import java.io.InputStreamReader;
 import java.text.NumberFormat;
-import java.time.LocalDate;
-import java.time.format.DateTimeFormatter;
 import java.util.ArrayList;
 import java.util.List;
 import java.util.Locale;
@@ -16,25 +14,25 @@ enum tipoDeVotos {
 
 public class App {
     public static void main(String[] args) throws Exception {
-        if (args.length != 4) {
-            throw new Exception("Numero de argumentos invalido");
-        }
+        // if (args.length != 4) {
+        //     throw new Exception("Numero de argumentos invalido");
+        // }
 
-        tipoDeVotos tipo;
-        if (args[0].equals("--estadual")) {
-            tipo = tipoDeVotos.ESTADUAL;
-        } else if (args[0].equals("--federal")) {
-            tipo = tipoDeVotos.FEDERAL;
-        } else {
-            throw new Exception("Tipo de votos invalido");
-        }
+        // tipoDeVotos tipo;
+        // if (args[0].equals("--estadual")) {
+        //     tipo = tipoDeVotos.ESTADUAL;
+        // } else if (args[0].equals("--federal")) {
+        //     tipo = tipoDeVotos.FEDERAL;
+        // } else {
+        //     throw new Exception("Tipo de votos invalido");
+        // }
 
-        String pathCand = args[1];
-        String pathVotos = args[2];
+        // String pathCand = args[1];
+        // String pathVotos = args[2];
         
-        LocalDate data = LocalDate.parse(args[3],DateTimeFormatter.ofPattern("dd/MM/yyyy"));
+        // LocalDate data = LocalDate.parse(args[3],DateTimeFormatter.ofPattern("dd/MM/yyyy"));
 
-        Eleicao eleicao = new Eleicao(tipo);
+        Eleicao eleicao = new Eleicao(tipoDeVotos.ESTADUAL);
 
         List<String> colsArqCand = new ArrayList<String>();
         colsArqCand.add("CD_CARGO");
@@ -54,10 +52,11 @@ public class App {
         colsArqVot.add("NR_VOTAVEL");
         colsArqVot.add("QT_VOTOS");
 
-        ReadFile(pathCand, colsArqCand, eleicao);
-        ReadFile(pathVotos, colsArqVot, eleicao);
+        ReadFile("files/consulta_cand_2022_ES.csv", colsArqCand, eleicao);
+        ReadFile("files/votacao_secao_2022_ES.csv", colsArqVot, eleicao);
 
-        eleicao.printCandidatos();
+        eleicao.printaNumeroDeVagas();
+        eleicao.printPartidos();
     }
 
     // Separei a leitura do arquivo em uma funcao separada pq a gente usa ela em 2

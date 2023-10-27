@@ -21,7 +21,7 @@ public abstract class Candidato {
             int cdEleito,
             int sitCand,
             Partido partido) {
-                
+
         this.nomeUrna = nomeUrna;
         this.numCandidato = numCandidato;
         this.cargo = cargo;
@@ -43,6 +43,10 @@ public abstract class Candidato {
         return this.elegivel;
     }
 
+    public int getQtdVotos() {
+        return this.qtdVotos;
+    }
+
     public Partido getPartido() {
         return this.partido;
     }
@@ -51,12 +55,21 @@ public abstract class Candidato {
         this.qtdVotos += votos;
     }
 
+    public boolean verificaEleito() {
+        if (this.cdEleito == 2 || this.cdEleito == 3) {
+            return true;
+        } else {
+            return false;
+        }
+    }
+
     public abstract void registraVotos(int votos);
 
     @Override
     public String toString() {
-        String msg = this.nomeUrna + " - " + partido.toString() + " - VOTOS: " + this.qtdVotos;
-
+        String msg = this.nomeUrna + 
+                    "(" + this.partido.getSigla() + ", " +
+                    this.qtdVotos + " votos)";
         return msg;
     }
 }
