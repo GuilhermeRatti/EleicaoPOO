@@ -78,8 +78,12 @@ public class Eleicao {
                     (int) linhaConvertida.get("CD_SITUACAO_CANDIDATO_TOT"),
                     pt);
         }
-
         return candidato;
+    }
+
+    public void ordenaCandidatos(){
+        List<Candidato> candidatosOrdenados = new ArrayList<Candidato>(this.totalCandidatos.values());
+        candidatosOrdenados.sort()
     }
 
     public void printCandidatos() {
