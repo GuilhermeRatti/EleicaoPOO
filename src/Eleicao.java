@@ -155,6 +155,7 @@ public class Eleicao {
     }
 
     public void printaRelatorio5() {
+        System.out.println("Votaçao dos partidos e número de candidatos eleitos:");
         if(this.partidosOrdenados==null)
             this.ordenaPartidos();
         
@@ -163,6 +164,10 @@ public class Eleicao {
             System.out.println((i+1) + " - " + p);
             i++;
         }
+    }
+
+    public void printaRelatorio6(){
+        
     }
 
     public void ordenaCandidatos() {
