@@ -167,7 +167,7 @@ public class Eleicao {
     }
 
     public void printaRelatorio5() {
-        if(this.partidosOrdenados==null)
+        if (this.partidosOrdenados == null)
             this.ordenaPartidos();
 
         System.out.println("Votaçao dos partidos e número de candidatos eleitos:");
