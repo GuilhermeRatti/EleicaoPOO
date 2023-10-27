@@ -55,7 +55,7 @@ public class App {
         ReadFile("files/consulta_cand_2022_ES.csv", colsArqCand, eleicao);
         ReadFile("files/votacao_secao_2022_ES.csv", colsArqVot, eleicao);
 
-        eleicao.printaNumeroDeVagas();
+        eleicao.ordenaPartidos();
         eleicao.printPartidos();
     }
 

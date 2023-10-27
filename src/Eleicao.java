@@ -94,18 +94,25 @@ public class Eleicao {
 
     public void ordenaCandidatos(){
         List<Candidato> candidatosOrdenados = new ArrayList<Candidato>(this.totalCandidatos.values());
-        candidatosOrdenados.sort();
+        candidatosOrdenados.sort(new ComparadorDeCandidato());
+        this.candidatosOrdenados = candidatosOrdenados;
+    }
+
+    public void ordenaPartidos(){
+        List<Partido> partidosOrdenados = new ArrayList<Partido>(this.partidos.values());
+        partidosOrdenados.sort(new ComparadorDePartidos());
+        this.partidosOrdenados = partidosOrdenados;
     }
 
     public void printCandidatos() {
 
-        for (Candidato c : this.totalCandidatos.values()) {
+        for (Candidato c : this.candidatosOrdenados) {
             System.out.println(c);
         }
     }
 
     public void printPartidos() {
-        for (Partido p : this.partidos.values()) {
+        for (Partido p : this.partidosOrdenados) {
             System.out.println(p);
         }
     }
