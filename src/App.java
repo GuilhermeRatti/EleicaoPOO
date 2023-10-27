@@ -55,8 +55,9 @@ public class App {
         ReadFile("files/consulta_cand_2022_ES.csv", colsArqCand, eleicao);
         ReadFile("files/votacao_secao_2022_ES.csv", colsArqVot, eleicao);
 
-        eleicao.ordenaPartidos();
-        eleicao.printPartidos();
+        eleicao.printaNumeroDeVagas();
+        eleicao.ordenaCandidatos();
+        eleicao.printCandidatos();
     }
 
     // Separei a leitura do arquivo em uma funcao separada pq a gente usa ela em 2

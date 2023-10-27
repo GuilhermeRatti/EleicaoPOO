@@ -1,7 +1,6 @@
 import java.util.ArrayList;
 import java.util.List;
 
-
 public class Partido {
     private List<Candidato> candidatos = new ArrayList<Candidato>();
     private String sigla;
@@ -50,8 +49,8 @@ public class Partido {
     @Override
     public String toString() {
         String msg = this.sigla + " - " + this.numPartido + ", " +
-                (this.qtdVotosLegenda + this.qtdVotosNominais) + " votos " +
-                "(" + this.qtdVotosNominais + " nominais e " + this.qtdVotosLegenda + " de legenda), " +
+                String.format("%,d", this.qtdVotosLegenda + this.qtdVotosNominais).replace(',', '.') + " votos " +
+                "(" + String.format("%,d", this.qtdVotosNominais).replace(',', '.') + " nominais e " + String.format("%,d", this.qtdVotosLegenda).replace(',', '.') + " de legenda), " +
                 this.getQtdCandEleitos() + " candidatos eleitos";
 
         return msg;

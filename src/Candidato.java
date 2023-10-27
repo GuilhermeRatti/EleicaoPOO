@@ -69,7 +69,7 @@ public abstract class Candidato {
     public String toString() {
         String msg = this.nomeUrna + 
                     "(" + this.partido.getSigla() + ", " +
-                    this.qtdVotos + " votos)";
+                    String.format("%,d",this.qtdVotos).replace(',', '.') + " votos)";
         return msg;
     }
 }
