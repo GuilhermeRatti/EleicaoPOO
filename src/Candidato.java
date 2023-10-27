@@ -63,6 +63,14 @@ public abstract class Candidato {
         }
     }
 
+    public LocalDate getDataNascimento() {
+        return dataNascimento;
+    }
+
+    public int getGenero() {
+        return this.genero;
+    }
+
     public abstract void registraVotos(int votos);
 
     @Override

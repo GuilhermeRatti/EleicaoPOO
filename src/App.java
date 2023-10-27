@@ -7,10 +7,6 @@ import java.util.List;
 import java.util.Locale;
 import java.util.Map;
 
-enum tipoDeVotos {
-    ESTADUAL, FEDERAL;
-}
-
 public class App {
     public static void main(String[] args) throws Exception {
         // if (args.length != 4) {
@@ -32,7 +28,7 @@ public class App {
         // LocalDate data =
         // LocalDate.parse(args[3],DateTimeFormatter.ofPattern("dd/MM/yyyy"));
 
-        Eleicao eleicao = new Eleicao(tipoDeVotos.ESTADUAL);
+        Eleicao eleicao = new Eleicao(tipoDeCargo.FEDERAL);
 
         List<String> colsArqCand = new ArrayList<String>();
         colsArqCand.add("CD_CARGO");
@@ -61,6 +57,10 @@ public class App {
         eleicao.printaRelatorio3();
         eleicao.printaRelatorio4();
         eleicao.printaRelatorio5();
+        //eleicao.printaRelatorio6();
+        eleicao.printaRelatorio7();
+        eleicao.printaRelatorio8();
+        eleicao.printaRelatorio9();
     }
 
     // Separei a leitura do arquivo em uma funcao separada pq a gente usa ela em 2
@@ -74,7 +74,7 @@ public class App {
 
             Reader.setHeaders(buffer.readLine()); // FUNCAO QUE ASSOCIA O INDICE DE CADA COLUNA COM O NOME DELAS
 
-            System.out.println("Lendo arquivo " + Path.split(";")[Path.split(";").length - 1] + "...");
+            //System.out.println("Lendo arquivo " + Path.split(";")[Path.split(";").length - 1] + "...");
             Locale brLocale = Locale.forLanguageTag("pt-BR");
             NumberFormat nf = NumberFormat.getInstance(brLocale);
 

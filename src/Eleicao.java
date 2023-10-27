@@ -1,21 +1,30 @@
 import java.time.LocalDate;
+import java.time.format.DateTimeFormatter;
 import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
+
+enum tipoDeCargo {
+    ESTADUAL, FEDERAL;
+}
 
 public class Eleicao {
     private Map<Integer, Partido> partidos = new HashMap<Integer, Partido>();
     private Map<Integer, Candidato> totalCandidatos = new HashMap<Integer, Candidato>();
     private List<Candidato> candidatosOrdenados;
     private List<Partido> partidosOrdenados;
+    private LocalDate dataDaEleicao;
     private String estado;
-    private tipoDeVotos tipo;
+    private tipoDeCargo tipo;
     private int numeroDeVagas;
+    private int totalVotosNominais;
+    private int totalVotosLegenda;
 
-    public Eleicao(tipoDeVotos tipo) {
+    public Eleicao(tipoDeCargo tipo) {
         this.candidatosOrdenados = null;
         this.partidosOrdenados = null;
+        this.dataDaEleicao = LocalDate.parse("02/10/2022", DateTimeFormatter.ofPattern("dd/MM/yyyy"));
         this.tipo = tipo;
     }
 
@@ -26,8 +35,8 @@ public class Eleicao {
                     !((String) linhaConvertida.get("NM_TIPO_DESTINACAO_VOTOS")).equals("Válido (legenda)"))
                 return;
 
-            if (!(this.tipo == tipoDeVotos.ESTADUAL && (int) linhaConvertida.get("CD_CARGO") == 7 ||
-                    this.tipo == tipoDeVotos.FEDERAL && (int) linhaConvertida.get("CD_CARGO") == 6))
+            if (!(this.tipo == tipoDeCargo.ESTADUAL && (int) linhaConvertida.get("CD_CARGO") == 7 ||
+                    this.tipo == tipoDeCargo.FEDERAL && (int) linhaConvertida.get("CD_CARGO") == 6))
                 return;
 
             Partido pt = partidos.get((Integer) linhaConvertida.get("NR_PARTIDO"));
@@ -47,16 +56,22 @@ public class Eleicao {
                 this.numeroDeVagas++;
             }
 
-        } else if (this.tipo == tipoDeVotos.ESTADUAL && (int) linhaConvertida.get("CD_CARGO") == 7 ||
-                this.tipo == tipoDeVotos.FEDERAL && (int) linhaConvertida.get("CD_CARGO") == 6) {
+        } else if (this.tipo == tipoDeCargo.ESTADUAL && (int) linhaConvertida.get("CD_CARGO") == 7 ||
+                this.tipo == tipoDeCargo.FEDERAL && (int) linhaConvertida.get("CD_CARGO") == 6) {
 
             Candidato c = this.totalCandidatos.get((int) linhaConvertida.get("NR_VOTAVEL"));
             if (c != null) {
                 c.registraVotos((int) linhaConvertida.get("QT_VOTOS"));
+                if (c instanceof CandidatoLegenda)
+                    this.totalVotosLegenda += (int) linhaConvertida.get("QT_VOTOS");
+                else
+                    this.totalVotosNominais += (int) linhaConvertida.get("QT_VOTOS");
             } else {
                 Partido p = this.partidos.get((int) linhaConvertida.get("NR_VOTAVEL"));
-                if (p != null)
+                if (p != null) {
                     p.registraVotosLegenda((int) linhaConvertida.get("QT_VOTOS"));
+                    this.totalVotosLegenda += (int) linhaConvertida.get("QT_VOTOS");
+                }
             }
         }
     }
@@ -89,7 +104,7 @@ public class Eleicao {
     }
 
     public void printaNumeroDeVagas() {
-        System.out.println("Numero de Vagas: " + this.numeroDeVagas);
+        System.out.println("Numero de Vagas: " + this.numeroDeVagas + "\n");
     }
 
     public void printaRelatorio1() {
@@ -116,7 +131,7 @@ public class Eleicao {
 
         System.out.println("Candidatos mais votados (em ordem decrescente de votação e respeitando número de vagas):");
         for (int i = 0; i < this.numeroDeVagas; i++) {
-            System.out.println((i+1) + " - " + this.candidatosOrdenados.get(i));
+            System.out.println((i + 1) + " - " + this.candidatosOrdenados.get(i));
         }
         System.out.println("");
     }
@@ -155,14 +170,15 @@ public class Eleicao {
     }
 
     public void printaRelatorio5() {
-        if(this.partidosOrdenados==null)
+        if (this.partidosOrdenados == null)
             this.ordenaPartidos();
-        
+
         int i = 0;
-        for(Partido p : this.partidosOrdenados) {
-            System.out.println((i+1) + " - " + p);
+        for (Partido p : this.partidosOrdenados) {
+            System.out.println((i + 1) + " - " + p);
             i++;
         }
+        System.out.println("");
     }
 
     public void ordenaCandidatos() {
@@ -175,5 +191,97 @@ public class Eleicao {
         List<Partido> partidosOrdenados = new ArrayList<Partido>(this.partidos.values());
         partidosOrdenados.sort(new ComparadorDePartidos());
         this.partidosOrdenados = partidosOrdenados;
+    }
+
+    public void printaRelatorio7() {
+        if (this.candidatosOrdenados == null)
+            ordenaCandidatos();
+
+        int sub30 = 0,
+                _30a40 = 0,
+                _40a50 = 0,
+                _50a60 = 0,
+                acima60 = 0,
+                i = 0;
+
+        for (Candidato c : this.candidatosOrdenados) {
+            if (i == this.numeroDeVagas)
+                break;
+            if (c.verificaEleito()) {
+                int diff = this.dataDaEleicao.getYear() - c.getDataNascimento().getYear();
+                if (diff < 30)
+                    sub30++;
+                else if (diff >= 30 && diff < 40)
+                    _30a40++;
+                else if (diff >= 40 && diff < 50)
+                    _40a50++;
+                else if (diff >= 50 && diff < 60)
+                    _50a60++;
+                else
+                    acima60++;
+
+                i++;
+            }
+        }
+
+        System.out.println("Eleitos, por faixa etária (na data da eleição):");
+        System.out.println("      Idade < 30: " + sub30 + " ("
+                + String.format("%.02f", (float) sub30 / (float) this.numeroDeVagas * 100).replace(".", ",") + "%)");
+        System.out.println("30 <= Idade < 40: " + _30a40 + " ("
+                + String.format("%.02f", (float) _30a40 / (float) this.numeroDeVagas * 100).replace(".", ",") + "%)");
+        System.out.println("40 <= Idade < 50: " + _40a50 + " ("
+                + String.format("%.02f", (float) _40a50 / (float) this.numeroDeVagas * 100).replace(".", ",") + "%)");
+        System.out.println("50 <= Idade < 60: " + _50a60 + " ("
+                + String.format("%.02f", (float) _50a60 / (float) this.numeroDeVagas * 100).replace(".", ",") + "%)");
+        System.out.println("60 <= Idade     : " + acima60 + " ("
+                + String.format("%.02f", (float) acima60 / (float) this.numeroDeVagas * 100).replace(".", ",") + "%)");
+        System.out.println("");
+    }
+
+    public void printaRelatorio8() {
+        if (this.candidatosOrdenados == null)
+            ordenaCandidatos();
+
+        int fem = 0, masc = 0;
+
+        for (Candidato c : this.candidatosOrdenados) {
+            if (c.verificaEleito()) {
+                if (c.getGenero() == 2)
+                    masc++;
+                else
+                    fem++;
+            }
+        }
+
+        System.out.println("Eleitos, por gênero:");
+        System.out.println("Feminino:  " + fem + " ("
+                + String.format("%.02f",
+                        (float) fem / (float) this.numeroDeVagas * 100)
+                        .replace(".", ",")
+                + "%)");
+        System.out.println("Masculino: " + masc + " ("
+                + String.format("%.02f",
+                        (float) masc / (float) this.numeroDeVagas * 100)
+                        .replace(".", ",")
+                + "%)");
+        System.out.println("");
+    }
+
+    public void printaRelatorio9() {
+        System.out.println("Total de votos válidos:    "
+                + String.format("%,d", this.totalVotosLegenda + this.totalVotosNominais).replace(',', '.'));
+        System.out.println("Total de votos nominais:   "
+                + String.format("%,d", this.totalVotosNominais).replace(',', '.') + " ("
+                + String.format("%.02f",
+                        (float) this.totalVotosNominais / (float) (totalVotosLegenda + this.totalVotosNominais) * 100)
+                        .replace(".", ",")
+                + "%)");
+        System.out.println("Total de votos de legenda: "
+                + String.format("%,d", this.totalVotosLegenda).replace(',', '.') + " ("
+                + String.format("%.02f",
+                        (float) this.totalVotosLegenda / (float) (totalVotosLegenda + this.totalVotosNominais) * 100)
+                        .replace(".", ",")
+                + "%)");
+        System.out.println("");
     }
 }

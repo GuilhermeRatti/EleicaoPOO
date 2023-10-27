@@ -41,7 +41,7 @@ public class CsvReader {
     }
 
     public void setHeaders(String colunas) {
-        System.out.println("\nSetando headers...");
+        //System.out.println("\nSetando headers...");
 
         String[] colunasArray = colunas.split(this.separador);
 
@@ -49,7 +49,7 @@ public class CsvReader {
             this.headerIndices.put(removeDoubleQuotes(colunasArray[i]), i);
         }
 
-        System.out.println("Headers setados!\n");
+        //System.out.println("Headers setados!\n");
         //System.out.println("Lista de headers processados: " + this.headerIndices.keySet() + "\n");
     }
 
