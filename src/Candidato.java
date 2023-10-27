@@ -4,7 +4,6 @@ public abstract class Candidato {
     private String nomeUrna;
     private int qtdVotos;
     private int numCandidato;
-    private int cargo;
     private int numFederacao;
     private LocalDate dataNascimento;
     private int genero;
@@ -14,7 +13,6 @@ public abstract class Candidato {
 
     public Candidato(String nomeUrna,
             int numCandidato,
-            int cargo,
             int numFederacao,
             LocalDate dataNascimento,
             int genero,
@@ -24,7 +22,6 @@ public abstract class Candidato {
 
         this.nomeUrna = nomeUrna;
         this.numCandidato = numCandidato;
-        this.cargo = cargo;
         this.numFederacao = numFederacao;
         this.dataNascimento = dataNascimento;
         this.genero = genero;

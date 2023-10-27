@@ -15,7 +15,6 @@ public class Eleicao {
     private List<Candidato> candidatosOrdenados;
     private List<Partido> partidosOrdenados;
     private LocalDate dataDaEleicao;
-    private String estado;
     private tipoDeCargo tipo;
     private int numeroDeVagas;
     private int totalVotosNominais;
@@ -82,7 +81,6 @@ public class Eleicao {
         if (((String) linhaConvertida.get("NM_TIPO_DESTINACAO_VOTOS")).equals("Válido (legenda)")) {
             candidato = new CandidatoLegenda((String) linhaConvertida.get("NM_URNA_CANDIDATO"),
                     (int) linhaConvertida.get("NR_CANDIDATO"),
-                    (int) linhaConvertida.get("CD_CARGO"),
                     (int) linhaConvertida.get("NR_FEDERACAO"),
                     (LocalDate) linhaConvertida.get("DT_NASCIMENTO"),
                     (int) linhaConvertida.get("CD_GENERO"),
@@ -92,7 +90,6 @@ public class Eleicao {
         } else {
             candidato = new CandidatoNominal((String) linhaConvertida.get("NM_URNA_CANDIDATO"),
                     (int) linhaConvertida.get("NR_CANDIDATO"),
-                    (int) linhaConvertida.get("CD_CARGO"),
                     (int) linhaConvertida.get("NR_FEDERACAO"),
                     (LocalDate) linhaConvertida.get("DT_NASCIMENTO"),
                     (int) linhaConvertida.get("CD_GENERO"),
@@ -161,7 +158,7 @@ public class Eleicao {
                 break;
             if (c.verificaEleito()) {
                 i++;
-                if (j >= 30)
+                if (j >= this.numeroDeVagas)
                     System.out.println((j + 1) + " - " + c);
             }
             j++;
@@ -170,27 +167,20 @@ public class Eleicao {
     }
 
     public void printaRelatorio5() {
-        System.out.println("Votaçao dos partidos e número de candidatos eleitos:");
         if(this.partidosOrdenados==null)
             this.ordenaPartidos();
-            
+
+        System.out.println("Votaçao dos partidos e número de candidatos eleitos:");
         int i = 0;
         for (Partido p : this.partidosOrdenados) {
             System.out.println((i + 1) + " - " + p);
             i++;
         }
+        System.out.println("");
     }
 
-    public void ordenaCandidatos() {
-        List<Candidato> candidatosOrdenados = new ArrayList<Candidato>(this.totalCandidatos.values());
-        candidatosOrdenados.sort(new ComparadorDeCandidato());
-        this.candidatosOrdenados = candidatosOrdenados;
-    }
+    public void printaRelatorio6() {
 
-    public void ordenaPartidos() {
-        List<Partido> partidosOrdenados = new ArrayList<Partido>(this.partidos.values());
-        partidosOrdenados.sort(new ComparadorDePartidos());
-        this.partidosOrdenados = partidosOrdenados;
     }
 
     public void printaRelatorio7() {
@@ -283,5 +273,17 @@ public class Eleicao {
                         .replace(".", ",")
                 + "%)");
         System.out.println("");
+    }
+
+    public void ordenaCandidatos() {
+        List<Candidato> candidatosOrdenados = new ArrayList<Candidato>(this.totalCandidatos.values());
+        candidatosOrdenados.sort(new ComparadorDeCandidato());
+        this.candidatosOrdenados = candidatosOrdenados;
+    }
+
+    public void ordenaPartidos() {
+        List<Partido> partidosOrdenados = new ArrayList<Partido>(this.partidos.values());
+        partidosOrdenados.sort(new ComparadorDePartidos());
+        this.partidosOrdenados = partidosOrdenados;
     }
 }

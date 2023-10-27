@@ -5,7 +5,6 @@ public class Partido {
     private List<Candidato> candidatos = new ArrayList<Candidato>();
     private String sigla;
     private int numPartido;
-    private int quantCand;
     private int qtdVotosNominais;
     private int qtdVotosLegenda;
     private boolean estaOrdenado;
@@ -27,7 +26,6 @@ public class Partido {
 
     public void addCandidato(Candidato cand) {
         this.candidatos.add(cand);
-        this.quantCand++;
     }
 
     public void registraVotosLegenda(int votos) {
