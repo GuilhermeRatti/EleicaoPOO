@@ -92,28 +92,43 @@ public class Eleicao {
         System.out.println("Numero de Vagas: " + this.numeroDeVagas);
     }
 
-    public void ordenaCandidatos(){
+    public void ordenaCandidatos() {
         List<Candidato> candidatosOrdenados = new ArrayList<Candidato>(this.totalCandidatos.values());
         candidatosOrdenados.sort(new ComparadorDeCandidato());
         this.candidatosOrdenados = candidatosOrdenados;
     }
 
-    public void ordenaPartidos(){
+    public void ordenaPartidos() {
         List<Partido> partidosOrdenados = new ArrayList<Partido>(this.partidos.values());
         partidosOrdenados.sort(new ComparadorDePartidos());
         this.partidosOrdenados = partidosOrdenados;
     }
 
-    public void printCandidatos() {
+    public void printaRelatorio1() {
+        if (this.candidatosOrdenados == null)
+            this.ordenaCandidatos();
 
+        int i = 0;
+        System.out.println("Deputados estaduais eleitos: ");
         for (Candidato c : this.candidatosOrdenados) {
-            System.out.println(c);
+            if (i == this.numeroDeVagas)
+                break;
+
+            if (c.verificaEleito()) {
+                System.out.println((i + 1) + " - " + c);
+                i++;
+            }
         }
+        System.out.println("");
     }
 
-    public void printPartidos() {
-        for (Partido p : this.partidosOrdenados) {
-            System.out.println(p);
+    public void printaRelatorio2() {
+        if (this.candidatosOrdenados == null)
+            this.ordenaCandidatos();
+
+        System.out.println("Candidatos mais votados (em ordem decrescente de votação e respeitando número de vagas):");
+        for (int i = 0; i < this.numeroDeVagas; i++) {
+            System.out.println((i+1) + " - " + this.candidatosOrdenados.get(i));
         }
     }
 }

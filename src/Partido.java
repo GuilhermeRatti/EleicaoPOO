@@ -50,7 +50,8 @@ public class Partido {
     public String toString() {
         String msg = this.sigla + " - " + this.numPartido + ", " +
                 String.format("%,d", this.qtdVotosLegenda + this.qtdVotosNominais).replace(',', '.') + " votos " +
-                "(" + String.format("%,d", this.qtdVotosNominais).replace(',', '.') + " nominais e " + String.format("%,d", this.qtdVotosLegenda).replace(',', '.') + " de legenda), " +
+                "(" + String.format("%,d", this.qtdVotosNominais).replace(',', '.') + " nominais e " 
+                + String.format("%,d", this.qtdVotosLegenda).replace(',', '.') + " de legenda), " +
                 this.getQtdCandEleitos() + " candidatos eleitos";
 
         return msg;

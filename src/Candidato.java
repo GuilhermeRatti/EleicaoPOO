@@ -67,7 +67,10 @@ public abstract class Candidato {
 
     @Override
     public String toString() {
-        String msg = this.nomeUrna + 
+        String asterisco = "";
+        if(this.numFederacao!=-1)  asterisco = "*";
+
+        String msg = asterisco + this.nomeUrna + 
                     "(" + this.partido.getSigla() + ", " +
                     String.format("%,d",this.qtdVotos).replace(',', '.') + " votos)";
         return msg;
