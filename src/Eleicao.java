@@ -40,7 +40,7 @@ public class Eleicao {
 
             Candidato candidato = this.criaCandidato(linhaConvertida, pt);
             totalCandidatos.put((int) linhaConvertida.get("NR_CANDIDATO"), candidato);
-            pt.addCandidato(candidato, (int) linhaConvertida.get("NR_CANDIDATO"));
+            pt.addCandidato(candidato);
 
             if ((int) linhaConvertida.get("CD_SIT_TOT_TURNO") == 3 ||
                     (int) linhaConvertida.get("CD_SIT_TOT_TURNO") == 2) {
@@ -108,19 +108,5 @@ public class Eleicao {
         for (Partido p : this.partidos.values()) {
             System.out.println(p);
         }
-    }
-}
-
-class ComparadorDeCandidato implements java.util.Comparator<Candidato> {
-    @Override
-    public int compare(Candidato arg0, Candidato arg1) {
-        return arg0.getQtdVotos() - arg1.getQtdVotos();
-    }
-}
-
-class ComparadorDePartidos implements java.util.Comparator<Partido> {
-    @Override
-    public int compare(Partido agr0, Partido arg1) {
-        return agr0.getQtdTotalDeVotos() - arg1.getQtdTotalDeVotos();
     }
 }

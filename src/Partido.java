@@ -1,8 +1,9 @@
-import java.util.HashMap;
-import java.util.Map;
+import java.util.ArrayList;
+import java.util.List;
+
 
 public class Partido {
-    private Map<Integer, Candidato> candidatos = new HashMap<Integer, Candidato>();
+    private List<Candidato> candidatos = new ArrayList<Candidato>();
     private String sigla;
     private int numPartido;
     private int quantCand;
@@ -22,8 +23,8 @@ public class Partido {
         return this.sigla;
     }
 
-    public void addCandidato(Candidato cand, int numCandidato) {
-        this.candidatos.put(numCandidato, cand);
+    public void addCandidato(Candidato cand) {
+        this.candidatos.add(cand);
         this.quantCand++;
     }
 
@@ -38,7 +39,7 @@ public class Partido {
     public int getQtdCandEleitos() {
         int qtd = 0;
 
-        for (Candidato c : this.candidatos.values()) {
+        for (Candidato c : this.candidatos) {
             if (c.verificaEleito())
                 qtd++;
         }
@@ -54,5 +55,12 @@ public class Partido {
                 this.getQtdCandEleitos() + " candidatos eleitos";
 
         return msg;
+    }
+}
+
+class ComparadorDePartidos implements java.util.Comparator<Partido> {
+    @Override
+    public int compare(Partido agr0, Partido arg1) {
+        return agr0.getQtdTotalDeVotos() - arg1.getQtdTotalDeVotos();
     }
 }

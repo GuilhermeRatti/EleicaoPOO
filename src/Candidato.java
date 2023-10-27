@@ -73,3 +73,10 @@ public abstract class Candidato {
         return msg;
     }
 }
+
+class ComparadorDeCandidato implements java.util.Comparator<Candidato> {
+    @Override
+    public int compare(Candidato arg0, Candidato arg1) {
+        return arg0.getQtdVotos() - arg1.getQtdVotos();
+    }
+}
