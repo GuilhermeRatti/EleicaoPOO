@@ -44,6 +44,14 @@ public abstract class Candidato {
         return this.qtdVotos;
     }
 
+    public int getNumCandidato() {
+        return this.numCandidato;
+    }
+
+    public String getNomeUrna() {
+        return this.nomeUrna;
+    }
+
     public Partido getPartido() {
         return this.partido;
     }

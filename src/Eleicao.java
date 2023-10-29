@@ -180,7 +180,27 @@ public class Eleicao {
     }
 
     public void printaRelatorio6() {
+        if (this.partidosOrdenados == null) {
+            this.ordenaPartidos();
+        }
+        this.ordenaPartidosPorCandidatoMaisVotado();
+        int i = 1;
+        System.out.println("Primeiro e último colocados de cada partido:");
+        for (Partido p : this.partidosOrdenados) {
+            formatacaoRelatorio6(p, i);
+            i++;
+        }
+        System.out.println("");
+    }
 
+    public void formatacaoRelatorio6(Partido p, int i) {
+        String msg = i + " - " + p.getSigla() + " - " + p.getNumPartido() + ", "
+                + p.getCandidatoMaisVotado().getNomeUrna() + " (" + p.getCandidatoMaisVotado().getNumCandidato() + ", "
+                + String.format("%,d", p.getCandidatoMaisVotado().getQtdVotos()).replace(',', '.') + " votos) / "
+                + p.getCandidatoMenosVotado().getNomeUrna()
+                + " (" + p.getCandidatoMenosVotado().getNumCandidato() + ", "
+                + String.format("%,d", p.getCandidatoMenosVotado().getQtdVotos()).replace(',', '.') + " votos)";
+        System.out.println(msg);
     }
 
     public void printaRelatorio7() {
@@ -286,4 +306,11 @@ public class Eleicao {
         partidosOrdenados.sort(new ComparadorDePartidos());
         this.partidosOrdenados = partidosOrdenados;
     }
+
+    public void ordenaPartidosPorCandidatoMaisVotado(){
+        List<Partido> partidosOrdenados = new ArrayList<Partido>(this.partidos.values());
+        partidosOrdenados.sort(new ComparadorDePartidosPorCandidatoMaisVotado());
+        this.partidosOrdenados = partidosOrdenados;
+    }
+    
 }

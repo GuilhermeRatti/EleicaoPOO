@@ -20,6 +20,10 @@ public class Partido {
         return this.qtdVotosLegenda + this.qtdVotosNominais;
     }
 
+    public int getNumPartido() {
+        return this.numPartido;
+    }
+
     public String getSigla() {
         return this.sigla;
     }
@@ -83,11 +87,19 @@ class ComparadorDePartidos implements java.util.Comparator<Partido> {
     public int compare(Partido arg0, Partido arg1) {
         return arg1.getQtdTotalDeVotos() - arg0.getQtdTotalDeVotos();
     }
+}
 
-    class ComparadorDeVotos implements java.util.Comparator<Partido> {
-        @Override
-        public int compare(Partido arg0, Partido arg1) {
-            return arg1.getCandidatoMaisVotado().getQtdVotos() - arg0.getCandidatoMaisVotado().getQtdVotos();
-        }
+class ComparadorDeVotos implements java.util.Comparator<Partido> {
+    @Override
+    public int compare(Partido arg0, Partido arg1) {
+        return arg1.getCandidatoMaisVotado().getQtdVotos() - arg0.getCandidatoMaisVotado().getQtdVotos();
+    }
+    
+}
+
+class ComparadorDePartidosPorCandidatoMaisVotado implements java.util.Comparator<Partido>{
+    @Override
+    public int compare(Partido arg0, Partido arg1) {
+        return arg1.getCandidatoMaisVotado().getQtdVotos() - arg0.getCandidatoMaisVotado().getQtdVotos();
     }
 }

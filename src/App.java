@@ -2,6 +2,8 @@ import java.io.BufferedReader;
 import java.io.FileInputStream;
 import java.io.InputStreamReader;
 import java.text.NumberFormat;
+import java.time.LocalDate;
+import java.time.format.DateTimeFormatter;
 import java.util.ArrayList;
 import java.util.List;
 import java.util.Locale;
@@ -9,25 +11,26 @@ import java.util.Map;
 
 public class App {
     public static void main(String[] args) throws Exception {
-        // if (args.length != 4) {
-        // throw new Exception("Numero de argumentos invalido");
-        // }
+        if (args.length != 4) {
+            throw new Exception("Numero de argumentos invalido");
+        }
 
-        // tipoDeVotos tipo;
-        // if (args[0].equals("--estadual")) {
-        // tipo = tipoDeVotos.ESTADUAL;
-        // } else if (args[0].equals("--federal")) {
-        // tipo = tipoDeVotos.FEDERAL;
-        // } else {
-        // throw new Exception("Tipo de votos invalido");
-        // }
+        tipoDeCargo tipo;
+        if (args[0].equals("--estadual")) {
+            tipo = tipoDeCargo.ESTADUAL;
+        } else if (args[0].equals("--federal")) {
+            tipo = tipoDeCargo.FEDERAL;
+        } else {
+            throw new Exception("Tipo de votos invalido");
+        }
 
-        // String pathCand = args[1];
-        // String pathVotos = args[2];
+        String pathCand = args[1];
+        String pathVotos = args[2];
 
-        // LocalDate data =
-        // LocalDate.parse(args[3],DateTimeFormatter.ofPattern("dd/MM/yyyy"));
-
+        String dataStr = args[3];
+        DateTimeFormatter formatter = DateTimeFormatter.ofPattern("dd/MM/yyyy");
+        LocalDate data = LocalDate.parse(dataStr, formatter);
+        
         Eleicao eleicao = new Eleicao(tipoDeCargo.FEDERAL);
 
         List<String> colsArqCand = new ArrayList<String>();
@@ -48,8 +51,8 @@ public class App {
         colsArqVot.add("NR_VOTAVEL");
         colsArqVot.add("QT_VOTOS");
 
-        ReadFile("files/consulta_cand_2022_ES.csv", colsArqCand, eleicao);
-        ReadFile("files/votacao_secao_2022_ES.csv", colsArqVot, eleicao);
+        ReadFile(pathCand, colsArqCand, eleicao);
+        ReadFile(pathVotos, colsArqVot, eleicao);
 
         eleicao.printaNumeroDeVagas();
         eleicao.printaRelatorio1();
@@ -57,7 +60,7 @@ public class App {
         eleicao.printaRelatorio3();
         eleicao.printaRelatorio4();
         eleicao.printaRelatorio5();
-        //eleicao.printaRelatorio6();
+        eleicao.printaRelatorio6();
         eleicao.printaRelatorio7();
         eleicao.printaRelatorio8();
         eleicao.printaRelatorio9();
@@ -74,7 +77,8 @@ public class App {
 
             Reader.setHeaders(buffer.readLine()); // FUNCAO QUE ASSOCIA O INDICE DE CADA COLUNA COM O NOME DELAS
 
-            //System.out.println("Lendo arquivo " + Path.split(";")[Path.split(";").length - 1] + "...");
+            // System.out.println("Lendo arquivo " + Path.split(";")[Path.split(";").length
+            // - 1] + "...");
             Locale brLocale = Locale.forLanguageTag("pt-BR");
             NumberFormat nf = NumberFormat.getInstance(brLocale);
 
