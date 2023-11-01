@@ -21,7 +21,11 @@ public class CsvReader {
 
         for(String col : columns){
             try {
-                if (col.startsWith("NR") || col.startsWith("QT") || col.startsWith("CD")) {
+                if (linhaArray[this.headerIndices.get(col)] == null) {
+                    System.out.println("ERa isso meixmo");
+                    System.exit(1);
+                }
+                else if (col.startsWith("NR") || col.startsWith("QT") || col.startsWith("CD")) {
                     int valorConvertido = nf.parse(removeDoubleQuotes(linhaArray[this.headerIndices.get(col)])).intValue();
                     result.put(col, valorConvertido);
                 } else if (col.startsWith("DT")) {
@@ -32,8 +36,9 @@ public class CsvReader {
                     result.put(col, removeDoubleQuotes(linhaArray[this.headerIndices.get(col)]));
                 }     
             } catch (Exception e) {
-                System.out.println("\n!!Coluna não encontrada: " + col +"!!\n");
-                System.exit(1);
+                // System.out.println("\n!!Coluna não encontrada: " + col +"!!\n");
+                // System.exit(1);
+                result.put(col, null);
             }
         }
 

@@ -1,5 +1,5 @@
 import java.time.LocalDate;
-import java.time.format.DateTimeFormatter;
+import java.time.Period;
 import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.List;
@@ -20,19 +20,18 @@ public class Eleicao {
     private int totalVotosNominais;
     private int totalVotosLegenda;
 
-    public Eleicao(tipoDeCargo tipo) {
+    public Eleicao(tipoDeCargo tipo, LocalDate data) {
         this.candidatosOrdenados = null;
         this.partidosOrdenados = null;
-        this.dataDaEleicao = LocalDate.parse("02/10/2022", DateTimeFormatter.ofPattern("dd/MM/yyyy"));
+        this.dataDaEleicao = data;
         this.tipo = tipo;
     }
 
     public void registraLinha(Map<String, Object> linhaConvertida) {
+        if (verificaDadosInvalidos(linhaConvertida))
+            return;
+
         if (linhaConvertida.size() > 3) {
-            if (!((int) linhaConvertida.get("CD_SITUACAO_CANDIDATO_TOT") == 2 ||
-                    (int) linhaConvertida.get("CD_SITUACAO_CANDIDATO_TOT") == 16) &&
-                    !((String) linhaConvertida.get("NM_TIPO_DESTINACAO_VOTOS")).equals("Válido (legenda)"))
-                return;
 
             if (!(this.tipo == tipoDeCargo.ESTADUAL && (int) linhaConvertida.get("CD_CARGO") == 7 ||
                     this.tipo == tipoDeCargo.FEDERAL && (int) linhaConvertida.get("CD_CARGO") == 6))
@@ -45,6 +44,11 @@ public class Eleicao {
                 partidos.put((Integer) linhaConvertida.get("NR_PARTIDO"), partido);
                 pt = partido;
             }
+
+            if (!((int) linhaConvertida.get("CD_SITUACAO_CANDIDATO_TOT") == 2 ||
+                    (int) linhaConvertida.get("CD_SITUACAO_CANDIDATO_TOT") == 16) &&
+                    !((String) linhaConvertida.get("NM_TIPO_DESTINACAO_VOTOS")).equals("Válido (legenda)"))
+                return;
 
             Candidato candidato = this.criaCandidato(linhaConvertida, pt);
             totalCandidatos.put((int) linhaConvertida.get("NR_CANDIDATO"), candidato);
@@ -176,6 +180,7 @@ public class Eleicao {
             System.out.println((i + 1) + " - " + p);
             i++;
         }
+
         System.out.println("");
     }
 
@@ -187,6 +192,8 @@ public class Eleicao {
         int i = 1;
         System.out.println("Primeiro e último colocados de cada partido:");
         for (Partido p : this.partidosOrdenados) {
+            if (p.getQtdDeCandidatos() == 0)
+                continue;
             formatacaoRelatorio6(p, i);
             i++;
         }
@@ -218,7 +225,8 @@ public class Eleicao {
             if (i == this.numeroDeVagas)
                 break;
             if (c.verificaEleito()) {
-                int diff = this.dataDaEleicao.getYear() - c.getDataNascimento().getYear();
+                Period period = c.getDataNascimento().until(this.dataDaEleicao);
+                int diff = period.getYears();
                 if (diff < 30)
                     sub30++;
                 else if (diff >= 30 && diff < 40)
@@ -307,10 +315,17 @@ public class Eleicao {
         this.partidosOrdenados = partidosOrdenados;
     }
 
-    public void ordenaPartidosPorCandidatoMaisVotado(){
+    public void ordenaPartidosPorCandidatoMaisVotado() {
         List<Partido> partidosOrdenados = new ArrayList<Partido>(this.partidos.values());
         partidosOrdenados.sort(new ComparadorDePartidosPorCandidatoMaisVotado());
         this.partidosOrdenados = partidosOrdenados;
     }
-    
+
+    private boolean verificaDadosInvalidos(Map<String, Object> MapDeDados) {
+        for (Object dado : MapDeDados.values()) {
+            if (dado == null)
+                return true;
+        }
+        return false;
+    }
 }

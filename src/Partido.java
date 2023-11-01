@@ -29,7 +29,8 @@ public class Partido {
     }
 
     public void addCandidato(Candidato cand) {
-        this.candidatos.add(cand);
+        if (cand instanceof CandidatoNominal)
+            this.candidatos.add(cand);
     }
 
     public void registraVotosLegenda(int votos) {
@@ -57,6 +58,7 @@ public class Partido {
     }
 
     public Candidato getCandidatoMaisVotado() {
+
         if (!this.estaOrdenado) {
             this.ordenaCandidatosDoPartido();
         }
@@ -68,6 +70,10 @@ public class Partido {
             this.ordenaCandidatosDoPartido();
         }
         return this.candidatos.get(this.candidatos.size() - 1);
+    }
+
+    public int getQtdDeCandidatos() {
+        return this.candidatos.size();
     }
 
     @Override
@@ -105,6 +111,11 @@ class ComparadorDeVotos implements java.util.Comparator<Partido> {
 class ComparadorDePartidosPorCandidatoMaisVotado implements java.util.Comparator<Partido> {
     @Override
     public int compare(Partido arg0, Partido arg1) {
-        return arg1.getCandidatoMaisVotado().getQtdVotos() - arg0.getCandidatoMaisVotado().getQtdVotos();
+        if (arg0.getQtdDeCandidatos() == 0)
+            return 1;
+        else if (arg1.getQtdDeCandidatos() == 0)
+            return -1;
+        else
+            return arg1.getCandidatoMaisVotado().getQtdVotos() - arg0.getCandidatoMaisVotado().getQtdVotos();
     }
 }

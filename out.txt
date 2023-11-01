@@ -1,0 +1,1646 @@
+Buildfile: /home/guilherme/EleicaoPOO/build.xml
+
+init:
+
+compile:
+
+run-estadual:
+     [java] LANDO
+     [java] VANDERLEIA DA ROSA
+     [java] ULISSES LIMA
+     [java] BUSATO
+     [java] FABIANO RHEINHEIMER
+     [java] FERNANDO PEPO
+     [java] DR CARLOS BLUM
+     [java] MARIO BRUCK
+     [java] PAI WILSON DE OXALï¿½
+     [java] KARINA SANTOS
+     [java] JANE CENI
+     [java] RENER
+     [java] LEANDRO ALMEIDA
+     [java] WAGNER GANEM
+     [java] RODRIGO MARONI DOS ANIMAIS
+     [java] ALESSANDRA NOGUEIRA
+     [java] CAUDURO PROFESSOR
+     [java] SIMPLESMENTE EVA
+     [java] MARA REJANE
+     [java] DIRCEU FRANCISCON
+     [java] LETICIA MUNHOZ
+     [java] EDUARDO SIMCHEN
+     [java] LAURECI DE BORBA
+     [java] NEORILDO DASSI
+     [java] RICARDO FAVIN
+     [java] ZOINHO
+     [java] PROFESSORA RITA DELLA GIUSTINA
+     [java] PASTOR OTACILIO
+     [java] BRUNO EIZERIK
+     [java] ROSI DA SAï¿½DE
+     [java] MARI BUENO
+     [java] MOISï¿½S PERTILE
+     [java] ROSSANO FARIAS
+     [java] SANNY FIGUEIREDO
+     [java] WESLEI OLï¿½A
+     [java] LEONARDO STEPHAN
+     [java] PALOMA DAUDT
+     [java] MAURICIO DZIEDRICKI
+     [java] RIAN PESCADOR
+     [java] WAGNER GALARDï¿½O
+     [java] REGINETE BISPO
+     [java] CARMEM ROSANE ROVERï¿½
+     [java] TITA Gï¿½TTERT
+     [java] BISPO ISMAEL
+     [java] LAURA SITO
+     [java] CLARICE CHIOMENTO MINOZZO
+     [java] LUCI MARCHI
+     [java] MARCIA SOUZA
+     [java] PATRï¿½CIA CADEIRANTE
+     [java] MIRO DOS BRINQUEDOS
+     [java] CARIOCA FISCAL DO POVO
+     [java] CARLA RODRï¿½GUES
+     [java] EVANDRO BEHR
+     [java] RONALDO NOGUEIRA
+     [java] RAFAEL DRESCH
+     [java] PROFESSOR PAULO BURMANN
+     [java] PROFESSORA HELENIR
+     [java] XASCOTE
+     [java] PATRICIA LOUPEE
+     [java] SIMONE FLORES
+     [java] ONYX LORENZONI
+     [java] DR. BRAULIO FRENTE DA INFANCIA
+     [java]  RAMIRO ROSï¿½RIO
+     [java] EDEGAR PRETTO
+     [java] RENATO DE OLIVEIRA
+     [java] TONY MACHADO
+     [java] ADRIANO STRACK
+     [java] EDUARDO LEITE
+     [java] DR. JORGE ALAN
+     [java] CLAUDIï¿½O DE IBIAï¿½ï¿½
+     [java] SILVANA COVATTI
+     [java] MARA GROSS
+     [java] WILLIAM MIRANDA
+     [java] LAï¿½RCIO ZANCAN - LALï¿½
+     [java] Mï¿½RCIA SCHERER
+     [java] VILMAR O GARI
+     [java] MOISï¿½S FONTOURA
+     [java] GILVANI O GRINGO
+     [java] ALEXANDRE
+     [java] MARIA EUNICE
+     [java] ANINHA
+     [java] AMARAL EL NEGRITO
+     [java] ROBINHO Sï¿½
+     [java] PROF. ANA VALESCA
+     [java] NADER
+     [java] CARLOS Bï¿½RIGO
+     [java] ï¿½LVARO ARAï¿½JO
+     [java] TINA NORONHA
+     [java] ADRIANE WINKEL
+     [java] ADRIANA PALLADINO
+     [java] HELDER JACOBY
+     [java] BETO NORONHA
+     [java] MARCIO BIOLCHI
+     [java] Cï¿½SAR
+     [java] MARCOS ALMEIRA
+     [java] PAULO AZEREDO
+     [java] GAï¿½CHO DA GERAL
+     [java] ANINHA OVIEDO
+     [java] VALERIO MARCON
+     [java] KELLY SILVA
+     [java] SEFORA MOTA
+     [java] LAURO
+     [java] SARGENTO FELï¿½CIO
+     [java] PASTOR GEFERSON PADILHA
+     [java] CLOVIS PORTELA
+     [java] LISIANE BECKER
+     [java] PEDRO HARTMANN
+     [java] ALINE KERBER
+     [java] CAPELETTI
+     [java] ADï¿½O PRETTO
+     [java] LILICO MELLA
+     [java] DANIEL TRZECIAK DANIEL DA TV 
+     [java] MARCOS PEIXOTO
+     [java] PROFESSOR ADï¿½O CLEITON
+     [java] VITOR LOPES
+     [java] FLï¿½VIO DE SOUZA
+     [java] SUMAQUE
+     [java] RENAN SANTOS
+     [java] NIVIO BRAZ POLICIAL FEDERAL
+     [java] TENENTE BIANCHINI
+     [java] TEREZA FUJII
+     [java] LELO HAHN
+     [java] BRANQUINHO
+     [java] FRAN SOMENSI
+     [java] Jï¿½LIO ARAï¿½JO
+     [java] ALE DAL ZOTTO
+     [java] FERNANDO RESNER
+     [java] DONA RENI Vï¿½
+     [java] PERSON MENDES
+     [java] RICARDO ADAMY
+     [java] MESTRE PELï¿½
+     [java] CELSO GIESE
+     [java] Dï¿½RIO
+     [java] PROFESSOR WAMBERT DI LORENZO
+     [java] THARLY ALEIXO
+     [java] CARLOS ALAN
+     [java] RENATO COSTA
+     [java] LUIS CARLOS HEINZE
+     [java] JOSE STEDILE
+     [java] DELEGADO ALVARO BECKER
+     [java] AIRTON LIMA
+     [java] FILIPE MACHADO
+     [java] MARISLANE DAPPER
+     [java] BIBIANA BUENO
+     [java] MIGUEL ROSSETTO
+     [java] PAULO MOREIRA
+     [java] PEPI DA CRUZEIRO
+     [java] TONI MATRIX
+     [java] MARCEL VAN HATTEM
+     [java] POMPEO DE MATTOS
+     [java] ANDRï¿½ PACHECO
+     [java] ANA AFFONSO
+     [java] MIRO JESSE
+     [java] MATHEUS GOMES
+     [java] NARA CORRï¿½A
+     [java] MARI DE BORTOLI
+     [java] PROFESSORA ELIANE
+     [java] ELISA
+     [java] ALEX BOSCAINI
+     [java] MACEGA NELES
+     [java] ROGï¿½RIO UBERABA
+     [java] IZABELLA CANABARRO
+     [java] VICENTE BOGO
+     [java] MANO MARTINS
+     [java] MARA MACHADO
+     [java] RENAN SOCCOL
+     [java] PSICï¿½LOGA TANISE SABINO
+     [java] MISSIONï¿½RIA GICELA FREITAS
+     [java] CRIS MEDEIROS
+     [java] PRETTU DO FERRO VELHO
+     [java] MARIA ELZIRA
+     [java] BRUNO CARRï¿½O PATAXO
+     [java] CRISTIANE DA SILVA CONCEIï¿½ï¿½O
+     [java] MARCUS GARCIA
+     [java] CHARLES CRIS
+     [java] FABINHO NAVARRO
+     [java] CARLOS MELLO
+     [java] EDIVILSON BRUM
+     [java] PROF ELOIR MBYï¿½ GUARANI
+     [java] JOï¿½O PEDRO GRILL
+     [java] RENATO MOLLING
+     [java] MARCIA LUCAS
+     [java] ERNANI POLO
+     [java] EVERTON KREMER BRANQUINHO
+     [java] FABIANO DA COSTA
+     [java] MARIA RITA
+     [java] MARCELO BRUM A VOZ DO CAMPO
+     [java] CAPITï¿½O MARTIM
+     [java] MAX
+     [java] ROGERIO CERATTI
+     [java] RODRIGO LORENZONI
+     [java] PAOLA FOLLETTO
+     [java] DR ALAN MELLO
+     [java] Fï¿½ SERPA
+     [java] JEFF MULLER
+     [java] BIRA DO ONIBUS
+     [java] JOHN ELVIS
+     [java] DR ZACCARO
+     [java] DEYA PINHEIRO
+     [java] MARCIO AURELIO
+     [java] JOCIMAR SANTOS
+     [java] ANDRï¿½ ROTA SENA
+     [java] SABRINA EMMEL
+     [java] GIOVANE WICKERT
+     [java] PROF CATIA COLOMBO
+     [java] GELSON BRAGA
+     [java] RENATO TOIGO
+     [java] INï¿½S MARTINS
+     [java] ROSSANO GONï¿½ALVES
+     [java] BEATRIZ SOUZA
+     [java] Cï¿½TINA MONTEIRO
+     [java] SALMO
+     [java] ANSELMO RODRIGUES
+     [java] LEMOS
+     [java] MARCELO LAGO ROBALO
+     [java] NADIM
+     [java] GIANE LAUXEN
+     [java] LUCAS FUHR
+     [java] MARIANO
+     [java] PAULO BRITO
+     [java] PAULO ROBERTO
+     [java] ARGENTA
+     [java] DIMAS
+     [java] JAIRINHO MELO DA COMUNIDADE
+     [java] RUBENS ROBINSON
+     [java] CLASSMANN
+     [java] RAFAEL BATERA CADEIRANTE
+     [java] MAURO PINHEIRO
+     [java] RODRIGO POX
+     [java] GRAZI OLIVEIRA
+     [java] ELIANE KUCK
+     [java] SANDRO MARQUES
+     [java] CANHOTO
+     [java] GISELDA RIBEIRO
+     [java] ABRï¿½O GODOIS
+     [java] EDSON DA ROSA
+     [java] SERGIO PIRES DIAS CABELUDO
+     [java] FRANCISCO SETTINERI
+     [java] LAURO HAGEMANN
+     [java] Lï¿½CIA LIMA
+     [java] PATRICIA ALBA
+     [java] CARLOS MELLO
+     [java] MOISï¿½S BARBOZA MALUCO DO BEM 
+     [java] BENHUR TIECHER
+     [java] CACHAMBU
+     [java] Cï¿½SSIO MOREIRA
+     [java] CARLOS JUNIOR
+     [java] GUILHERME GIL
+     [java] GUILHERME FERNANDES
+     [java] JOSï¿½ PANTERA
+     [java] TIAGO DE BARï¿½ ONï¿½Lï¿½
+     [java] MANOELA
+     [java] MARCUS CUNHA
+     [java] CATIUSCIA SANTOS
+     [java] MAURICIO MACHADO
+     [java] ANA BOMBOM
+     [java] MARCOS MAIER
+     [java] IVAN
+     [java] TENENTE NEREU LOPES
+     [java] DIARAN SILVA
+     [java] KAKï¿½ D ï¿½VILA
+     [java] NIVEA ROSA
+     [java] PROFESSOR GILLI
+     [java] JORGE LIMA
+     [java] SARTURI
+     [java] BETHINHO
+     [java] JULIANO CORTES
+     [java] ANA RITA
+     [java] DR MARCOS
+     [java] CORONEL JORGE SCHWERZ AO CBT
+     [java] DORIS NEUMANN
+     [java] KAKï¿½ RIBEIRO
+     [java] MATEUS DUARTE
+     [java] JACKSON RABUSKE
+     [java] PROFESSORA NADIR
+     [java] PEDRO RUAS
+     [java] RONALDO TROJAHN
+     [java] VALï¿½RIA MULLER
+     [java] IRIEL SACHET
+     [java] DENISE PESSï¿½A
+     [java] TIAGO SIMON
+     [java] UH FABIANO
+     [java] CARLOS GOMES
+     [java] DUDA KELLER
+     [java] DUDA AMARAL
+     [java] MARNI SAGGIN
+     [java] DELEGADO FEDERAL LUCIANO LEDUR
+     [java] CORONEL MARCO SANTOS
+     [java] ENGENHEIRO ROSBERGUER
+     [java] TENENTE NETO
+     [java] BADACO
+     [java] DANY ARAï¿½JO
+     [java] LIDIANE FUNARI
+     [java] MURILLINHO
+     [java] JOLISA DUARTE
+     [java] JANAINA GOMES
+     [java] RINALDO
+     [java] LUCIANO CAZZ
+     [java] RAQUEL BAIRROS
+     [java] VELLINHO PINTO
+     [java] MOSSINI
+     [java] TIA DA MERENDA SILVANA COSTA
+     [java] ADRIANA LEITE
+     [java] PEDRO WESTPHALEN
+     [java] PROFESSOR ISSUR
+     [java] JOï¿½O PEDRO
+     [java] ERON GARCIA
+     [java] VAGNER OLIVEIRA
+     [java] LUZIELE BUENO
+     [java] BARBARA SUSAN
+     [java] PEDRO ERNESTO RADIALISTA
+     [java] THIAGO RALDI
+     [java] PROFESSORA GIOVANA
+     [java] FAISAL KARAM
+     [java] DIEGO OLIVEIRA BOB 
+     [java] ALSOM SILVA
+     [java] TENENTE CORONEL ZUCCO
+     [java] MARIA XAVIER
+     [java] MARCELO NEGï¿½O
+     [java] PAI RICARDO DE OXUM
+     [java] DARLENE DA TUCA
+     [java] PROFESSOR LARA
+     [java] ALEIJADINHO ANHAIA
+     [java] CHRIS ALLVES
+     [java] DR. BENVEGNU
+     [java] NEY RIOS
+     [java] SARA MELO
+     [java] SOLANO SILVA
+     [java] VANIA GOLDENBERG
+     [java] ROQUE SERPA
+     [java] PROFESSOR ALENCART LOCH
+     [java] ANDREIA GREZZANA
+     [java] FREDERICO ANTUNES
+     [java] MARI CABELEREIRA
+     [java] MAINARDI
+     [java] PAULA FONTOURA
+     [java] IGOR PONZECCHI
+     [java] FELIPE CAMOZZATO
+     [java] MARGARET ROTTMANN
+     [java] GABRIELA ORTIZ
+     [java] RONALDO RIBEIRO
+     [java] Uï¿½LINTON GARCIA
+     [java] Zï¿½ DAMBRï¿½S
+     [java] COVATTI FILHO
+     [java] KATHREIN CASTRO
+     [java] ISMAEL FERRI SAPUCAIA
+     [java] CATITE
+     [java] CLAUDIA ARAUJO
+     [java] DRA FABIANE FERNANDES
+     [java] MANTAS IJUI
+     [java] Fï¿½BIO OSTERMANN
+     [java] BENHUR PEDROSO
+     [java] PEDRO MACARI
+     [java] ZEZO
+     [java] DR THIAGO
+     [java] RUY IRIGARAY BOLSONARO
+     [java] JOAO RODRIGUES
+     [java] LUIZ BECK
+     [java] MC PEDRï¿½O
+     [java] PROFESSOR BONATTO
+     [java] Gï¿½NIFER
+     [java] CONSUL
+     [java] GABRIEL SOUZA
+     [java] BOMBEIRO BIRA
+     [java] MARCELO BUZ
+     [java] WILKYNS GROSS
+     [java] EVELIN GARAGNANI
+     [java] CAPITï¿½O MACEDO PROFESSOR
+     [java] SARGENTO FLAVIA
+     [java] THAIS QUINTANA
+     [java] ROSANA ALMEIDA
+     [java] BORGES DA SEGURANï¿½A
+     [java] PAULINHO COUTINHO
+     [java] Mï¿½NICA LEAL
+     [java] EDGAR ROSA
+     [java] MARCEL FRISON
+     [java] SILVANA FALCï¿½O
+     [java] FERNANDA BISKUP
+     [java] JUSSARA MENDES
+     [java] JORGE DRUMM
+     [java] ï¿½GATA MOSTARDEIRO
+     [java] PROFESSOR CLAUDIO
+     [java] JAIR MENDES
+     [java] PICOLOTTO
+     [java] PROFESSOR LUCIANO ROCHA
+     [java] VALDIR MACHADO
+     [java] RAUL MENEZES TACO
+     [java] JETTO REIS
+     [java] MIRACY
+     [java] FERNANDO RITTER
+     [java] MANO CHANGES
+     [java] VICTOR HUGO
+     [java] BITO
+     [java] CLARICE RAMOS
+     [java] LISSANDRA THOMSEN
+     [java] JEFFERSON OLEA HOMRICH
+     [java] SIMONNE ZANELLA
+     [java] LOURDES SPRENGER
+     [java] CHACALL
+     [java] MARIO MANFRO
+     [java] JUARES MARTINS
+     [java] FABIANA SANGUINï¿½
+     [java] SARGENTO SANTANA
+     [java] LASIER MARTINS
+     [java] GLï¿½RIA MENEGOTTO
+     [java] NALIGIA
+     [java] JORGE BARBOSA
+     [java] FRAN ANTUNES
+     [java] CLEBERSON GARDIN
+     [java] ARTUR GOULART TAXISTA DO BEM
+     [java] JORGINHO POPULAR DEDE
+     [java] DANRLEI DE DEUS GOLEIRO
+     [java] DUDA LUIZELLI
+     [java] MARIA DO ROSï¿½RIO
+     [java] CHRIS COL BOLSONARO NUNCA MAIS
+     [java] RUBILAR TAVARES - JUQUINHA
+     [java] DINGO
+     [java] DIMITHRI VARGAS
+     [java] MARILEI
+     [java] RAFAEL PINTOS
+     [java] FABRICIO ROCHA
+     [java] MIGUEL CRIZEL
+     [java] RAFAEL CHULï¿½
+     [java] Mï¿½RCIO MENEZES
+     [java] ROSANE ANACLETO
+     [java] CLAUDIO DORO
+     [java] FABY GOMEZ
+     [java] LIZIANE BAYER
+     [java] DRA CIDA BRIZOLA
+     [java] GABI SCOSI
+     [java] CORONEL RIBAS
+     [java] NEIVA AMADOR
+     [java] GILMAR MAIA
+     [java] GIOVANI FELTES
+     [java] BRUNA ESTILISTA
+     [java] CLï¿½UDIO CONCEIï¿½ï¿½O
+     [java] PROFESSORA DENIZA SOUZA
+     [java] MARCIO FREITAS
+     [java] GISLAINE PIRES
+     [java] CEBOLA
+     [java] ELIANA BAYER
+     [java] PROF DR MAJOR ORLANDO FURTADO
+     [java] BETO FANTINEL
+     [java] JORGE MARETOLI
+     [java] GUILHERME PASIN
+     [java] Dï¿½IA DEVOS
+     [java] CHAGAS
+     [java] VANTUIR EMERSON
+     [java] NELCIR ANDRï¿½
+     [java] CELSIO HOLZ
+     [java] O HOMEM DO CAMINHï¿½O
+     [java] ROMARIO KRUG
+     [java] GLORIA FIGUEIRO
+     [java] CLAUDINHA LOPES
+     [java] PROFE DANIELA
+     [java] TONY SECHI
+     [java] PROF CAROL
+     [java] JORGINHO TREZE FUTSAL
+     [java] ELIANE DALACOSTA
+     [java] AILTON MORAES
+     [java] LEO SILVESTRIN
+     [java] MARCIA COELHO
+     [java] MISSIONï¿½RIA DENISE TAVARES
+     [java] NATASHA
+     [java] ANGELA NUNES
+     [java] LISI DIAS
+     [java] SARGENTO MARCONI
+     [java] NINJA MOTOBOY
+     [java] TOM GOMES
+     [java] JOï¿½O DERLY
+     [java] FERNANDA BARTH
+     [java] Mï¿½RCIO CHAGAS COLETIVO NEGRO
+     [java] Lï¿½CIO DO PRADO
+     [java] ANA QUADROS
+     [java] RODINEI CANDEIA
+     [java] JANIELI MONCORVO
+     [java] NEREU PIOVESAN
+     [java] JEFERSON CARECA
+     [java] VANDO RIBEIRO
+     [java] CAIO FERREIRA
+     [java] RENATA MENGER
+     [java] CRISTIANO D ATE AMO BICHO
+     [java] PRETO EX GOLEIRO DO INTER
+     [java] CARLOS RENATO SOUZA SEVERO
+     [java] ADRIANO DORNELLES
+     [java] MARILICE MIRANDA
+     [java] PEDRO PEREIRA 
+     [java] ARTHUR CUNHA
+     [java] TALIM PACHECO
+     [java] Fï¿½TIMA MARIA
+     [java] PROFESSOR BRUNO SILVEIRA
+     [java] PROFESSOR LINEKER
+     [java] RAFAEL FLECK
+     [java] ATIVISTA GABRIEL GONï¿½ALVES
+     [java] PREGO MOTOS
+     [java] LUIRCE PAZ
+     [java] APOSTOLO JAIME
+     [java] ONYX LORENZONI
+     [java] EVï¿½NIA NUNES
+     [java] BIRA TEIXEIRA
+     [java] LUCAS DE OLIVEIRA
+     [java] Jï¿½SSICA CARDOSO
+     [java] LUCIANE MANFRO
+     [java] MARISTELA ZANOTTO
+     [java] MATHEUS ANDREIA
+     [java] MERILIN
+     [java] ROMï¿½RIO PAZ
+     [java] INSPETOR CELSO MORAIS
+     [java] IVAR PAVAN
+     [java] PAULO ROSA
+     [java] ROSE
+     [java] LIDO STROPPER
+     [java] PROFESSOR VINICIUS
+     [java] DRA. ANA CORONEL
+     [java] ANDRï¿½ OLIVEIRA
+     [java] DELEGADO ZUCCO
+     [java] TATY
+     [java] SANDRO BOKA
+     [java] FLAVIO MACIEL
+     [java] LORENA Gï¿½RGEN
+     [java] FILIPE LOPES
+     [java] GILSON SARMENTO
+     [java] RAQUEL FERREIRA
+     [java] LUANA SEVERO
+     [java] NHARAM CARVALHO
+     [java] ELIZANDRO SABINO
+     [java] JADER MARETOLI
+     [java] PEDRO INCERTI
+     [java] Sï¿½O
+     [java] ANDRï¿½ KISUCO
+     [java] ROGERIO VALIM
+     [java] ENG PAULO GEMELLI
+     [java] TANGER JARDIM
+     [java] ELIO RENATO
+     [java] TANIA DA SILVA
+     [java] SILVANA MACHADO
+     [java] CELSO KRAMER
+     [java] FREI Sï¿½RGIO
+     [java] DANIEL JEFFERSON
+     [java] DR MOACIR
+     [java] ADEMAR MORAES
+     [java] ROGERIO GOMES
+     [java] NILMAR PIVA
+     [java] DR. ARMANDO MONIZ
+     [java] CHRISTIAN LEMOS 
+     [java] ANTONIO COLETIVO Mï¿½OS DADAS
+     [java] EDSON NESPOLO
+     [java] LUANA ROLIM DE MOURA
+     [java] ROBERTO ROBAINA
+     [java] ROSANE ROSA
+     [java] COMUNICADOR JULIANO
+     [java] RUBEM DE CASTRO
+     [java] LUIS DIEGO SOARES
+     [java] MARLI SERPA
+     [java] MAURICIO MARCON
+     [java] Mï¿½RCIA BRASIL
+     [java] PAULO CALEFFI
+     [java] ADA CRISTINA MUNARETTO
+     [java] PRETO
+     [java] HENRIQUE MACHADO
+     [java] PROFESSOR EDUARDO RUPPENTHAL
+     [java] ELTON OPPERMANN
+     [java] TINA OLIVEIRA
+     [java] IVAN DUARTE
+     [java] DOUTOR SCHULTE
+     [java] DR FERNANDO TARRAGï¿½
+     [java] BARBARA GOMES DA SILVEIRA
+     [java] DJ ALEXANDRE THUSCO ELVIS
+     [java] GILBERTO GOMES
+     [java] DJ BETTONI
+     [java] SANNY FIGUEIREDO
+     [java] DR JORGE AMARAL
+     [java] LUIZ PINHEIRO
+     [java] ï¿½MERSON DA COSTA
+     [java] TATIANE GARCIA
+     [java] DEJA Jï¿½
+     [java] JACKES ANDRADE
+     [java] PROF ALEX FRAGA
+     [java] RENE RIBEIRO
+     [java] ANSELMO CORTES
+     [java] REGINA KROLOW
+     [java] ALBERTO HECK
+     [java] DALCISO OLIVEIRA
+     [java] EVERTON CENTURIï¿½O
+     [java] MOTOBOY MICHEL CHARï¿½O
+     [java] ELIAS CABREIRA
+     [java] IZAMEL FERREIRA
+     [java] LUIS FERNANDO BRAITE
+     [java] CACï¿½ ALONSO
+     [java] JOEL JUNIOR
+     [java] LUANA ROSA
+     [java] TIAGO BARBOZA
+     [java] FABIANO ANDRï¿½
+     [java] TIAGO CADï¿½
+     [java] CESAR AUGUSTO
+     [java] KAREN SANTOS
+     [java] TAILA PORTO
+     [java] ELTON WEBER
+     [java] LENA BAHLIS
+     [java] CRISTIANE SEVERO
+     [java] TENENTE TEREZINHA
+     [java] CLAUDIO MARTINS
+     [java] MOTTA MAROMBA
+     [java] DUDA POMPERMAYER
+     [java] IAGO SANCHEZ
+     [java] MISSIONARIA FABIANA SILVA
+     [java] MAIRA MIOLLA
+     [java] SLAVIERO
+     [java] TEN DIï¿½GENES
+     [java] SERJï¿½O CARRETEIRO
+     [java] AXI MONCORVO
+     [java] ANAX PEZZIN
+     [java] AIRTON SOUZA
+     [java] NYAYA
+     [java] BETINA
+     [java] LITTIZINHO
+     [java] DR FAVIO TELIS
+     [java] DANIEL OLIVEIRA
+     [java] GERRI MACHADO
+     [java] ENGENHEIRO ZINI
+     [java] CHRISTOPHER GOULART
+     [java] GUSTAVO VICTORINO
+     [java] ENTROU
+     [java] JUH GUERRA
+     [java] SGT NASCIMENTO
+     [java] PATRï¿½CIA OLIVEIRA
+     [java] RODRIGO DOUG
+     [java] JAIR BATISTELLO
+     [java] TCHï¿½QUINHO
+     [java] Mï¿½RI PERES
+     [java] ROGï¿½RIO CHIMANSKI
+     [java] CANHOTINHO
+     [java] JAQUELINE CARATI
+     [java] MARCELO TATAU
+     [java] DANIEL MUSSI
+     [java] KALIFA DA FERRAGEM
+     [java] DR THIAGO BRUNET
+     [java] PROFESSOR GUILHERME
+     [java] MARIA RITA
+     [java] Lï¿½CIA CASTï¿½NCIO
+     [java] PROF FERNANDO HENNING
+     [java] MARIA HELENA
+     [java] NATALINO CANABARRO
+     [java] JULIO MOURA
+     [java] BETTO ALMEIDA
+     [java] RAFAEL GRAZIK
+     [java] LAï¿½S Nï¿½S COLETIVO
+     [java] SAMPAIO
+     [java] EDISON JUNIOR
+     [java]  DELEGADA NADINE
+     [java] GIO KRUG
+     [java] BOGORNI
+     [java] RAFAEL BARROS
+     [java] DR LAERCIO FERNANDES
+     [java] PEPE VARGAS
+     [java] JULIANA BRIZOLA
+     [java] DUDA BRENNER
+     [java] MARISOL SANTOS
+     [java] ALEXANDRE ESPETO
+     [java] PATRICIA BECK
+     [java] MARIA TERESA MOURA
+     [java] EDUARDO LOUREIRO
+     [java] JOï¿½O BRAUN
+     [java] JOSI RAMOS
+     [java] LEO GRANDE DO SUL
+     [java] TARCï¿½SIO ZIMMERMANN
+     [java] BRUNA E COLETIVO
+     [java] WILLIAM MONTEIRO
+     [java] NELSON MARCHEZAN Jï¿½NIOR
+     [java] NANI DUTRA
+     [java] MAURINHO FIUZA
+     [java] JAIME STARKE
+     [java] TENENTE PAULO KRAMBECK
+     [java] CLENI OLIVEIRA
+     [java] NESTOR SCHWERTNER
+     [java] PROF TOCO CORDEIRO
+     [java] DELEGADO JOï¿½O GOULART
+     [java] JANICE LEAL
+     [java] VILMA CIDADE
+     [java]  CATARINA PALADINI
+     [java] FELIPE DIEHL
+     [java] MALU LOOSE
+     [java] ARIEL BRANDï¿½O MORTADELA
+     [java] AFONSO HAMM
+     [java] MARIA
+     [java] EVANDRO PAIXï¿½O
+     [java] REITOR BROD
+     [java] ANA NERI
+     [java] CARMEN FERREIRA
+     [java] TIAGO ALBRECHT - TJ
+     [java] WERNER REMPEL
+     [java] LILIANE MARIA DALL OSTO (LICA)
+     [java] LUCINEIDE NEVES
+     [java] ROZELI GARI DO RENASCER
+     [java] JOï¿½O AMARAL
+     [java]  CARLOS ROBERTO RODRIGUES DE R
+     [java] LEONARDO MARQUES
+     [java] CRIS BARBIERO
+     [java] DARI RODRIGUES
+     [java] ANA Tï¿½RCIA
+     [java] PROFESSORA MARGARETE
+     [java] JURANDIR SILVA
+     [java] ALDEMIR FOGAï¿½A FOGACINHA
+     [java] Mï¿½RCIO FEIJï¿½
+     [java] RICARDO JOBIM
+     [java] GLï¿½UCIA SCHUMACHER
+     [java] CASSIï¿½ CARPES
+     [java] MARCO MARCHAND
+     [java] FLAVIO DUARTE OYARZABAL
+     [java] MARCELO PITOL
+     [java] MELINA LEMOS
+     [java] BIBIANA BUENO
+     [java] ALEX BORA
+     [java] CARLOS MESSALLA
+     [java] DOUGLAS MAESTRO PIFADOR
+     [java] FABRICIO GUAZZELLI PERUCHIN
+     [java] JORNALISTA DOLORES MASSOCHIN
+     [java] POLICIAL MARIANA LESCANO
+     [java] GERRI SAWARIS
+     [java] ATENA ROVEDA
+     [java] ALEX WAYWERINE
+     [java] RENI WEGMANN
+     [java] PAULO BERQUO
+     [java] RODRIGO CONTE
+     [java] LUCIANO GONï¿½ALVES
+     [java] DENTINHO
+     [java] DR. HERMES
+     [java] ANY ORTIZ
+     [java] CAMILA OLIVEIRA
+     [java] MARCIA LIMA
+     [java] VITOR PALADINI
+     [java] VIVIANA FORTES
+     [java] ZENAIDE DO BOLSONARO
+     [java] CORONEL AMORIM
+     [java] ï¿½VILA KING
+     [java] NEGA DIABA FILHA
+     [java] MAJOR PAULO TITO
+     [java] ERIC LINS
+     [java] CLAUDIO JANTA
+     [java] NATALI MACHADO
+     [java] DENISE CARDOSO
+     [java] DAIANA LUZ
+     [java] BRASIL OLIVEIRA
+     [java] JOï¿½O AUGUSTO
+     [java] MANIR ZENI
+     [java] DAIANA SANTOS
+     [java] DUDA MONTEIRO
+     [java] LOURDES SILVEIRA
+     [java] MARCELO LIMA
+     [java] CARLOS PELï¿½
+     [java] ANGEMIN CAMARGO
+     [java] PROF RITA
+     [java] ELISON DOMINGUES
+     [java] ALINE RIBEIRO
+     [java] FELIPE MARTINI
+     [java] MATHEUS LEï¿½O
+     [java] LETICIA BONASSINA
+     [java] RAFAEL BRAGA LIBRELOTTO
+     [java] CLï¿½UDIA ï¿½VILA
+     [java] TENENTE PATRICIA PARï¿½
+     [java] ZALUAR SOARES
+     [java] DIRCEU QUADROS
+     [java] BORTOLA
+     [java] FLï¿½VIA CORDEIRO
+     [java] HALLEY
+     [java] MIGUEL MEDINA
+     [java] NILCE SCHNEIDER
+     [java] PAULO Sï¿½RGIO
+     [java] MARCELINHO DA VAVï¿½
+     [java] BOHN GASS
+     [java] JOSï¿½ SANTANA - MICO
+     [java] HUNO
+     [java] Mï¿½NICA
+     [java] FRANCIANE BAYER
+     [java] JACKSON ARPINI DO HOSPITAL
+     [java] CLAUDIA SCHIEDECK
+     [java] ANA CRISTINA
+     [java] FRAN LINCK
+     [java] CORONEL VALDOIR
+     [java] ROMER GUEX
+     [java] ARTUR HEINZ
+     [java] MAï¿½RA LESSA
+     [java] BARRIQUELLO
+     [java] CLAUDIO TATSCH
+     [java] SANDRA POLETTO
+     [java] WILHER WELTER
+     [java] CARMEN FLORES
+     [java] PAULO SILVA
+     [java] LIZANDRA DA ROSA BORGES
+     [java] SARA VIEIRA
+     [java] PROFESSOR MARCELO DENTINHO
+     [java] MARCELO LIRA
+     [java] TELMO VIEIRA
+     [java] Mï¿½RCIO BINS ELY
+     [java] MARCELA LOPES
+     [java] CLAIR OLIVEIRA
+     [java] PROFESSORA REGINA
+     [java] VETERINï¿½RIO ANDRï¿½ EUGENIO
+     [java] RONALDO LISIAK
+     [java] Jï¿½NIOR FRANTZ
+     [java] PATRï¿½CIA NUNES
+     [java] ANGï¿½LICA MENEGAS
+     [java] ABNER DILLMANN
+     [java] ADRIANO MANï¿½O
+     [java] RODRIGO DEWES
+     [java] EWERTON FALK
+     [java] PAULO SILVA
+     [java] DR CARLOS CRUZ
+     [java] JUSSARA CAï¿½APAVA
+     [java] VANESSA BARCELLOS
+     [java] CLAIR KUHN
+     [java] SOLDADO ROSA
+     [java] ALTAIR ALVES
+     [java] ARI ZANONI DA CENTER
+     [java] DAIA
+     [java] KATIA DUARTE
+     [java] FRANCINI
+     [java] ADOLFO BRITO
+     [java] GRACIANO
+     [java] MARIA DO CARMO
+     [java] ANTONIO WECK
+     [java] WAGNER PETRINI
+     [java] JOï¿½O FISCHER - FIXINHA
+     [java] VINICIUS CARVALHO
+     [java] LEANDRO GONï¿½ALVES
+     [java] PAULINHO DOS SANTOS
+     [java] ANA CLAUDIA
+     [java] JUMIR CARVALHO
+     [java] TAï¿½S ITALY
+     [java] CARLA TORRES
+     [java] VIVIANE MAGALHï¿½ES
+     [java] ENFERMEIRA FERNANDA
+     [java] COMANDANTE Nï¿½DIA
+     [java] Zï¿½ LUIZ
+     [java] DANIEL SANTOS
+     [java] ANA PATELLA
+     [java] SERGINHO UBIRAJARA
+     [java] CARINA BELOME
+     [java] COMUNICADOR PAULO RICARDO
+     [java] GUTO LOPES
+     [java] JADIR TAVARES
+     [java] GOULART
+     [java] EVERTON MANINHO
+     [java] PASTOR PERCI
+     [java] MARCUS VINï¿½CIUS
+     [java] SHAIANE CASTRO
+     [java] RITA BERNARDES
+     [java] INGRA
+     [java] HUMBERTO MATOS
+     [java] PEZï¿½O ZILLI
+     [java] IDAIR ROSSI LANZARIN
+     [java] LUCIANE PEDRO
+     [java] ROGï¿½RIO FERRAZ
+     [java] MARCO ALBA
+     [java] ï¿½DERSON FERREIRA
+     [java] CLï¿½UDIA JARDIM
+     [java] LOCATELLI
+     [java] LELINHO LOPES
+     [java] GUILHERME LIMA
+     [java] LUCIANA CHAVES
+     [java] CORONEL TIARAJU
+     [java] NATO WERLANG
+     [java] MARCELO MACHADO
+     [java] ELOI SESSIM
+     [java] VALTENCIR CRUZ DO VITRINE
+     [java] ADAMIR VIVAN
+     [java] DARCI LIMA DA ROSA
+     [java] PASTOR OSVALDO OLIVEIRA
+     [java] MARA MALTA
+     [java] MAURI GRANDO
+     [java] HENRIQUE MASCARENHAS DE SOUZA
+     [java] MARA SANTOS
+     [java] JOï¿½O MARCELO
+     [java] DELEGADO HELIOMAR
+     [java] COMISSï¿½RIO RENATO ROSSO
+     [java] CREUZA BARRETO
+     [java] OLï¿½VIO DUTRA
+     [java] MARCEL FERREIRA
+     [java] KAREN LANNES
+     [java] SARTORI
+     [java] HAMILTON MOURï¿½O
+     [java] CRISTIANE DE DEUS
+     [java] MARIA IZABEL GARCIA
+     [java] DILEUSA ALVES
+     [java] SANDRO CYNTRï¿½O
+     [java] DR. ANTONIO MOELER
+     [java] CESAR OLIVEIRA
+     [java] DAVI SANTANA
+     [java] LEANDRO RUBILAR
+     [java] MARISTELA PANEGALLI
+     [java] ADROALDO DA SILVA COUTO
+     [java] MARIA CORINA
+     [java] LUIZ FERNANDO PADILHA
+     [java] NANDO SANTOS
+     [java] FELIPE PEDRI
+     [java] PROTETOR FELIPE
+     [java] MARCELO GARCIA
+     [java] Dï¿½BORA BRAGA
+     [java] GENERAL CARRIï¿½O
+     [java] NATIANE SOUSA
+     [java] AFONSO MOTTA
+     [java] ANACLETO ZANELLA
+     [java] MARISA TABORDA
+     [java] ANGï¿½LICA DO POSTINHO
+     [java] NIKAYA VIDOR
+     [java] DR NELSON
+     [java] ELISSANDRA RODRIGUES
+     [java] LUCIANO CESA
+     [java] NIKA
+     [java] JULIANO GOMES
+     [java] JOTA
+     [java] TATIANA ARMOS
+     [java] STAMM JUNIOR
+     [java] PAULO FIGUEIRï¿½ SOBRINHO
+     [java] AIRTON PEREIRA DA SILVA
+     [java] VIEIRA DA CUNHA
+     [java] JAQUELINE KITTELMANN
+     [java] LUIS CARLOS TROMBETTA
+     [java] FORTUNATI
+     [java] BETO SILVA
+     [java] CLEDSON MENDES DA CUNHA
+     [java] MARCO LIMA
+     [java] SILVIO RAFAELI
+     [java] VANUSA DA ROSA
+     [java] NERI O CARTEIRO
+     [java] ARMANDO SCHNEIDER
+     [java] PATRIK SILVEIRA CRAVO
+     [java] PAI PEDRO DE OXUM
+     [java] GISA AZAMBUJA
+     [java] JAIR RIZZO
+     [java] CAMILA NUNES
+     [java] ROSINHA CRESCENTE
+     [java] PASTORA MELISSA GALERY
+     [java] PATRIC LUDERITZ
+     [java] FLï¿½VIA RAUTA
+     [java] GEISA CARMO
+     [java] RICARDO WAGNER
+     [java] FABIANE PEGLOW
+     [java] EDUARDO LEITE
+     [java] GECI MALLMANN
+     [java] SANDERSON
+     [java] MARLI OLIVEIRA
+     [java] PAULO OPUSDEI
+     [java]  SPEROTTO
+     [java] CARLOS ADOTE VIRALATA
+     [java] ENIMAR JUNIOR SOARES MARQUES
+     [java] PEDRO DE OLIVEIRA
+     [java] CESAR BUSNELLO
+     [java] FLAVIO MACIEL
+     [java] FABIANE RODRIGUES
+     [java] GIOVANNI MACKEDANZ
+     [java] LUï¿½S FERNANDO PIRES
+     [java] CORONEL ELIAS
+     [java] ADELMO SOUZA
+     [java] RICARDO COUGO
+     [java] JOï¿½O MARTINS
+     [java] MISAEL FRANCO
+     [java] HEITOR SCHUCH
+     [java] MARIA IGNES GOULART
+     [java] CARMEM MIRANDA
+     [java] KELLY MORAES
+     [java] TONY OLIVEIRA
+     [java] DELEGADO DIOGO
+     [java] PAI BRANCO
+     [java] ESTELA MOTTA
+     [java] JOSï¿½ LUï¿½S ISERHARD
+     [java] TALIS FERREIRA
+     [java] PAULO BRANDï¿½O
+     [java] MICO GONZATTO
+     [java] LINO ABEL
+     [java] BOMBEIRO BATISTA
+     [java] MAICON LAFOURCADE
+     [java] DR GABRIEL
+     [java] REGINA KREUSBURG
+     [java] VILMAR ZANCHIN
+     [java] DALLA SANTA
+     [java] ADRIANO CHUVA
+     [java] GISELI CONSUELO
+     [java] CLEO PENHA
+     [java] NAVARRO GARRï¿½O
+     [java] Zï¿½ NUNES
+     [java] FERNANDO MARRONI
+     [java] ELVIS CABEï¿½A BRANCA
+     [java] KAROL WERNER
+     [java] FERNANDO GAï¿½CHO
+     [java] PROFESSOR NADO
+     [java] SOLDADO EVERALDO FRANCO
+     [java] OSMAR TERRA
+     [java] LUANA PASQUETTI
+     [java] LUCIANO ROSA
+     [java] ANDRï¿½ PLENTZ
+     [java] PABLO MELO
+     [java] RHILARY BECKER
+     [java] ANDRESSA PILAR
+     [java] CORONEL MALABARBA
+     [java] DRIKA
+     [java] ALE FERNANDES
+     [java] MARCELO BAGï¿½
+     [java] UEZ
+     [java] ROBSON LHUL
+     [java] CHRIS COL BOLSONARO NUNCA MAIS
+     [java] ENFERMEIRA Fï¿½BIA RICHTER
+     [java] ARNO QUEVEDO
+     [java] PROFESSOR LAURI BERNARDES
+     [java] PROFESSOR Tï¿½VI
+     [java] TENENTE COIMBRA
+     [java] Sï¿½MILA MONTEIRO
+     [java] CLAUDIA DUARTE
+     [java] STELA FARIAS
+     [java] JOVANI ROMARINHO
+     [java] PRISCILA VOIGT
+     [java] MARISA PROTETORA DE ANIMAIS
+     [java] MARIA HELENA
+     [java] MAGDA LOREDO
+     [java] PARANï¿½
+     [java] INVESTIGADORA ANA Tï¿½PPOR
+     [java] RODRIGO COLISSI
+     [java] LUANA NEILAND
+     [java] CLAUDIO PARANHOS
+     [java] Cï¿½CERO DO OPALA
+     [java] ROSELI ALBUQUERQUE
+     [java] MARCIA FUMAGALLI
+     [java] CLAUDIO CAVALO
+     [java] MARCON
+     [java] CELSO RICARDO
+     [java] MISSIONï¿½RIO VOLNEI
+     [java] SU CORRï¿½A
+     [java] CLï¿½UDIO PATAï¿½O
+     [java] PAULO ACCINELLI
+     [java] ROSEMARIE STEIN
+     [java] RONI BELLA
+     [java] TARCï¿½Z LAUS
+     [java] JURANDIR MACIEL
+     [java] GILBERTO CAPOANI
+     [java] ANDRï¿½ NOGUEIRA
+     [java] NADINE DUBAL
+     [java] ADRIANO BRESSAN
+     [java] JOï¿½O HENRIQUE
+     [java] Mï¿½RCIO VALLES
+     [java] JOï¿½O EHLERS
+     [java] LIZA
+     [java] THALLYA RODRIGUES
+     [java] DANIEL FAUTH
+     [java] DAIA FRAGA
+     [java] ROSE ESTRASULAS
+     [java] RUIVO
+     [java] JULIANO ROSO
+     [java] ANINHA DA COMUNIDADE
+     [java] JOï¿½O BATISTA DO MERCADO
+     [java] AZEVEDO DA SUSEPE
+     [java] VERA TITA
+     [java] PAULï¿½O BARBOSA
+     [java] SERGIO PERES
+     [java] ROBERTO ORNES
+     [java] DEBORA BIBIANO
+     [java] JEFERSON FERNANDES
+     [java] CAPITï¿½O NASCIMENTO
+     [java] PASTOR JEFERSON SIQUEIRA
+     [java] SIMONE SUAREZ
+     [java] VIVI PEREIRA
+     [java] CORONEL ANDREUZZA
+     [java] ERALDO ROGGIA
+     [java] CASSIO AZEVEDO
+     [java] DR ALFREDO CASTILLOS
+     [java] PAULO RITZEL
+     [java] JONATAN BRONSTRUP
+     [java] VERE
+     [java] CLENIO FAVIN
+     [java] EDINHO DE SOUZA
+     [java] EDUARDO MATOS
+     [java] BIBO NUNES
+     [java] Cï¿½SSIA KATHERINE
+     [java] KASSY BORGES
+     [java] ORION DE Sï¿½
+     [java] CARLA GODINHO 
+     [java] LEONEL RADDE
+     [java] SARGENTO VANDER DA LUZ
+     [java] ADRIANA LARA
+     [java] PASTOR CELSO
+     [java] VILMAR LOURENï¿½O
+     [java] SILVIO MARINO
+     [java] BENDER
+     [java] AIRTO FERRONATO
+     [java] MARCELO MORAES
+     [java] ZILIO
+     [java] TRISTINHO
+     [java] CORONEL AUGUSTO CESAR
+     [java] PAULA CASSOL
+     [java] RENAN BERLEZE RECCHIA
+     [java] SIMONE SABIN
+     [java] LUCIANO PINTO
+     [java] CORONEL FRANCISCO
+     [java] TELMINHA ABREU
+     [java] MAXSOEL BASTOS
+     [java] PAULINHO VARGAS DE URUGUAIANA
+     [java] CORONEL QUADROS
+     [java] ANA OLIVEIRA
+     [java] WALDIR DILKIN
+     [java] PASTOR CLAUDIOMIRO
+     [java] REGINA BECKER
+     [java] JAQUE VIDAL
+     [java] CORONEL BONFANTI
+     [java] ZILMA FAGUNDES
+     [java] INSPETOR PATRï¿½CIO
+     [java] Fï¿½ SERPA 
+     [java] DIENE DUTRA
+     [java] RAQUEL ALCANTï¿½RA
+     [java] CARLOS VIANA
+     [java] SANDRO ALVES
+     [java] TELISMAR LEMOS JUNIOR
+     [java] MATEUS WESP
+     [java] NANDO GROSS
+     [java] THIAGO DE LEON
+     [java] CARLOS VIEIRA
+     [java] GIOVANNI FERRAZ
+     [java] VALTER NAGELSTEIN
+     [java] ROBERTO SILVA
+     [java] GIUSEPPE RIESGO
+     [java] CHIQUINHO SANTA CRUZ
+     [java] GERSON BURMANN
+     [java] CLAUDETE NEVES
+     [java] MURILO MORETTO
+     [java] DANIEL OLIVEIRA
+     [java] NARA DAMIï¿½O
+     [java] ALISSON FERRONATO
+     [java] VIANA
+     [java] IVONETE CARVALHO
+     [java] DRA ROSELI POGGERE
+     [java] ï¿½DER AZEREDO (CANHï¿½O DO VALE)
+     [java] VITOR FUNILARIA
+     [java] DR SIMON
+     [java] PASTOR MAICON BANDEIRA
+     [java] ANA MAFALDA DUARTE
+     [java] ROSELMA MARQUES
+     [java] PAOLA VIEIRA
+     [java] DIVINA
+     [java] CHARLES SCHULLE
+     [java] GERMANO CAMINHA
+     [java] PROFESSORA JANETE
+     [java] JUSSARETE VARGAS
+     [java] SOSSELLA
+     [java] ADAVILSON TCHï¿½ TCHï¿½
+     [java] MARLI LIPERTE
+     [java] JOCELIN AZAMBUJA
+     [java] MESTRE ITAGIBA
+     [java] ABRAO MARTINS
+     [java] KERLY FERRO
+     [java] GIOVANI CHERINI
+     [java] NICOLAS XAVIER
+     [java] DAVID MARTINS
+     [java] PATRï¿½CIA ALMEIDA
+     [java] FABI BELING
+     [java] PIZZATTO
+     [java] PROFESSOR ISRAEL
+     [java] BOMBEIRO FRANï¿½A
+     [java] JOSI PAZ
+     [java] GAVA
+     [java] EILA LIMA
+     [java] MAJOR ROIS
+     [java] LINS ROBALO
+     [java] Jï¿½LIO LAMIM
+     [java] PROFESSOR VARGAS
+     [java] ISMAEL AMILIVIA
+     [java] LUIZ MARQUES CAVERA
+     [java] MARISA ALVES
+     [java] MENDES RIBEIRO
+     [java] GILCA ASSMUS
+     [java] PASTOR CLAITON
+     [java] JULIANO FLORIANO
+     [java] LUCIANO SILVEIRA
+     [java] PAULO MINCARONE FILHO
+     [java] TAMYRES FILGUEIRA
+     [java] JOSE MONTEIRO
+     [java] RODRIGUINHO
+     [java] ESTER MENEGUZZI
+     [java] BUTIACO
+     [java] BIANCA FEIJï¿½
+     [java] ROSELANE DO CINTURï¿½O AZUL
+     [java] FRANCIELI EICHLER
+     [java] JOHN CARDOSO
+     [java] CARLA SOPRAN PROTEGER E SALVAR
+     [java] MARCIO PATUSSI
+     [java] PROFESSORA LAVINA
+     [java] RAUL MARTINS
+     [java] MAURO PEREIRA
+     [java] ANA AMï¿½LIA LEMOS
+     [java] ANDRESSA CARDOSO
+     [java] VIVIA QUADROS
+     [java] IBRAIL VERGUEIRO
+     [java] VIVI COITINHO
+     [java] JUAN SAVEDRA
+     [java] MARI ANHANHA SUPTITZ
+     [java] REGIS ETHUR
+     [java] Kï¿½IO SANTOS
+     [java] VITOR AMARAL
+     [java] REINALDO PEREIRA
+     [java] CRIS MORAES
+     [java] ANA MACHADO
+     [java] PAULO VILLAR
+     [java] CADORE
+     [java] TIAGO THE POLICE
+     [java] DIVINA
+     [java] AIRTON ARTUS
+     [java] ANDERSON DORNELES
+     [java] MARCOS ARAUJO
+     [java] LUCIANO AZEVEDO
+     [java] CHRISTIAN RICARDO
+     [java] PROFESSORA INï¿½S
+     [java] JOSï¿½ ALVES
+     [java] FERNANDA BORSATTO
+     [java] ANANDA SILVA
+     [java] BRUNA Pï¿½MELA
+     [java] LEONEL MATIAS
+     [java] JEFERSON MATTOS
+     [java] CRISTINA OLIVEIRA
+     [java] PAULO TELLES
+     [java] SALETE ANHAIA
+     [java] Lï¿½CIA LUZ
+     [java] SANDRO MUTTONI
+     [java] COSTELLA
+     [java] ALCEU MOREIRA
+     [java] CRISTIANO SILVA
+     [java] FERNANDO BONORINO
+     [java] Kï¿½TIA BRITTO
+     [java] VEREADOR LUZ
+     [java] DOUGLAS SANDRI
+     [java] CARLA SARAIVA
+     [java] NEIVA LAZZAROTTO
+     [java] MANECO HASSEN
+     [java] EVA VALï¿½RIA LORENZATO
+     [java] SGT. EDILSON ZAMBARDA
+     [java] CRISTINE SOARES
+     [java] LUIZ MARENCO
+     [java] ENFERMEIRO GUSTAVO
+     [java] VALDECI OLIVEIRA
+     [java] CINTIA ROCKENBACH
+     [java] RICARDO GOLIN
+     [java] ALICE CARVALHO
+     [java] NAASOM LUCIANO
+     [java] ANA MORAES
+     [java] ELIANE AQUARIUS
+     [java] Lï¿½BIA AQUINO
+     [java] ELISEU VIEIRA
+     [java] CLAUDIA MANTOVANI
+     [java] WELLINGTON MASCATE
+     [java] ADMAR POZZOBOM
+     [java] NERISSON OLIVEIRA
+     [java] HELEN MACHADO
+     [java] ALEXANDRE LINDENMEYER
+     [java] ZAMBONI
+     [java] MANOEL MACHADO
+     [java] GOLD
+     [java] FERNANDO MEDEIROS
+     [java] LUIZINHO RUAS
+     [java] REPOLHINHO
+     [java] FABI BATEIA
+     [java] PATRICIA GONï¿½ALVES
+     [java] MAICON ZUGE
+     [java] ENIO BACCI
+     [java] REGIS MARQUES
+     [java] FRAN CUNHA
+     [java] EDILAMAR ALVES
+     [java] MARIO ZETTERMANN
+     [java] FERNANDA MELCHIONNA
+     [java] VERA ROSANE DE OLIVEIRA
+     [java] PEGORARO
+     [java] ROGï¿½RIO VALDUGA
+     [java] VICENTE SELISTRE
+     [java] ROSANE DASSI
+     [java] PAOLO KUCERA
+     [java] JORDAN PROTETOR
+     [java] LAFAIETT BORBA
+     [java] PAPARICO BACCHI
+     [java] PAULO PIMENTA
+     [java] TERESINHA MATOS
+     [java] ROGERIO BANDEIRA
+     [java] ROSELANE
+     [java] KAROL MEGGIATTO
+     [java] NADERSON
+     [java] ZILï¿½ BREITENBACH
+     [java] PEDRO STEIN
+     [java] CARLOS MINUSSI
+     [java] JESSE SANGALLI
+     [java] SILVIO LEIVAS
+     [java] EMERSON MACHADO
+     [java] DELEGADO BRANCO
+     [java] TIAGO PEDROSO
+     [java] HENRIQUE MANINHO
+     [java] ROSE SANTOS
+     [java] LUCIANA MENDINA
+     [java] GUERIN
+     [java] MARLON SANTOS
+     [java] VIVI DA SAï¿½DE
+     [java] DR. LUIS BRINGMANN
+     [java] ARQUITETO Fï¿½BIO LEAL
+     [java] XURRAS
+     [java] LUCIENNE REIS
+     [java] CORREIADUARTE
+     [java] SARGENTO TRINDADE
+     [java] LUCIANA GENRO
+     [java] MANO ROQUE
+     [java] BETO
+     [java] ANDRE PRETTO
+     [java] ENFERMEIRA METRANGOLO
+     [java] RUSCHEL
+     [java] SIONARA
+     [java] JULIO AGAPIO
+     [java] OLTENCIR SARAIVA LEITï¿½O
+     [java] MORAES FORTALEZA
+     [java] FERNANDA MIRANDA
+     [java] MARILIA FIDELL
+     [java] LU BOROWSKY
+     [java] PAULA NARDI
+     [java] ALEXANDRE GONï¿½ALVES
+     [java] VALDECIR PAULUS
+     [java] SILVIA SCHIRRMANN DOCE RECADO
+     [java] ARTUR LORENTZ
+     [java] SINARA KUHN
+     [java] LUCIO ALBUQUERQUE
+     [java] MAZZOCHIN
+     [java] BELEZA
+     [java] LAURA FERRAZ BAICK
+     [java] FORCOLEN DO BRASIL URGENTE
+     [java] PAULO SILVEIRA
+     [java] RICARDO FAGUNDES
+     [java] BRUNA MOLZ
+     [java] POLICIAL PENAL VAGNER FAN
+     [java] SABIï¿½ DA SERRA
+     [java] CESAR PONTES
+     [java] GABRIELI VAZ
+     [java] BIBI MELLO
+     [java] ALEXANDRE BOBADRA
+     [java] CRIS PEREIRA
+     [java] JONATHAN RODRIGUES
+     [java] ANDRï¿½ MACHADO
+     [java] EMERSON CORREA
+     [java] JOEL DE IGREJINHA
+     [java] DARI DA SILVA
+     [java] DESPACHANTE BORORï¿½
+     [java] CHEILA GULGELMIN
+     [java] JAIRO ISLABï¿½O
+     [java] ARLINDO LOPES
+     [java] VANICE DE MATOS
+     [java] SANTINI
+     [java] CLEMENTE
+     [java] MARA RODRIGUES
+     [java] FERNANDINHO LOURENï¿½O
+     [java] CLAUDINHA SANTOS
+     [java] EDIMILSON ANGER DA VEIGA
+     [java] DR EDMILSON FREIRE
+     [java] REJANE DE OLIVEIRA
+     [java] POETA ELIAS VIDAL SOBRINHO
+     [java] JANIR BRANCO
+     [java] JOSï¿½ CAPAVERDE
+     [java] SILVIA MARIA
+     [java] DR. FELIPE
+     [java] BISOL
+     [java] BARBARA PENNA
+     [java] Yï¿½
+     [java] FELIPE KUHN BRAUN
+     [java] HENRIQUE LIMA
+     [java] MARCELO MECANICO
+     [java] EVERTON ï¿½DOLOS
+     [java] ZILA FARIAS
+     [java] ANA MARIA ANTUNES
+     [java] WILSON ESTIVALETE
+     [java] AMINIE P J C S
+     [java] EVANDRO MEIRELES
+     [java] ANA AITA
+     [java] CLï¿½UDIA JARDIM
+     [java] GABRIEL SOUZA
+     [java] EDSON CANABARRO
+     [java] MICHELE WEGLER
+     [java] Lï¿½LIAN LINHARES
+     [java] BIA PICCOLI
+     [java] DELEGADO FERNANDO
+     [java] BRUNA DIBURCIO
+     [java] ENFERMEIRA VERA
+     [java] PEDRO MAGALHï¿½ES
+     [java] EDUARDO MANIQUE
+     [java] GAUCHO DA SAUDE
+     [java] PAULO FERREIRA
+     [java] Sï¿½RGIO TURRA
+     [java] PAULA ALMEIDA
+     [java] ï¿½Yï¿½ SANDRALI
+     [java] BRUNA RODRIGUES
+     [java] LEUDO COSTA
+     [java] LUCIANA NUNES
+     [java] CASSIANO FONTANA
+     [java] JOSï¿½ SCORSATTO
+     [java] NEREU CRISPIM
+     [java] PR OSï¿½AS COSTA
+     [java] LAERCIO THADEU
+     [java] MILTON CAETANO
+     [java] LUCAS REDECKER
+     [java] JOSUï¿½ RODRIGUES
+     [java] CAMILA TEIXEIRA
+     [java] MAURO ALMEIDA
+     [java] MAURO BRUM
+     [java] JONATAS TEIXEIRA
+     [java] TITINHO
+     [java] PATY REX
+     [java] SAMUEL
+     [java] VIVIANE OLIVEIRA
+     [java] CAREN KRAKHECKER
+     [java] CARLA BRUM
+     [java] HAMILTON ALVES
+     [java] GABRIEL DIAS
+     [java] RODRIGO PAULO
+     [java] ASSIS MELO
+     [java] CLAUDIA THOMPSON
+     [java] FILIPE ALVES MATHIAS 
+     [java] DOROTï¿½O FAGUNDES
+     [java] SANDRO FANTINEL
+     [java] TEN. MARCOS ROCHA
+     [java] ï¿½NDIA GOMES
+     [java] GIAN PEDROSO
+     [java] Zï¿½ ROBERTO
+     [java] DANIELE RECHENMACHER
+     [java] CORONEL NAPOLEï¿½O
+     [java] JEFFERSON TIEGO
+     [java] RAQUEL MORSCH
+     [java] LEILA CASTRO
+     [java] VIGILANTE REGINALDO MORAIS
+     [java] LUCIANO BARROS
+     [java] CACIQUE JADIR
+     [java] PR MARCELINO MOREIRA
+     [java] SARITA STRï¿½HER
+     [java] RICARDO MONTANA
+     [java] DR BENEDETTI
+     [java] DEISI MARANATA
+     [java] LUIZ JACOMINI
+     [java] SOFIA CAVEDON
+     [java] MIRIAM KATIUSCIA
+     [java] PABLO HERNANDEZ
+     [java] JOSï¿½ ODIL APP
+     [java] PAOLA SALDIVIA
+     [java] CARLOS CARDOSO
+     [java] Número de Vagas: 31
+     [java] 
+     [java] Deputados estaduais eleitos: 
+     [java] 1 - GIOVANI CHERINI (PL, 87.994 votos)
+     [java] 2 - COVATTI FILHO (PP, 71.779 votos)
+     [java] 3 - POMPEO DE MATTOS (PDT, 58.251 votos)
+     [java] 4 - CARLOS GOMES (REPUBLICANOS, 52.375 votos)
+     [java] 5 - BIBO NUNES (PL, 37.756 votos)
+     [java] 6 - TENENTE CORONEL ZUCCO (REPUBLICANOS, 24.201 votos)
+     [java] 7 - *DANIEL TRZECIAK DANIEL DA TV  (PSDB, 16.822 votos)
+     [java] 8 - SANDERSON (PL, 16.360 votos)
+     [java] 9 - BUSATO (UNIï¿½O, 13.017 votos)
+     [java] 10 - MARCEL VAN HATTEM (NOVO, 8.221 votos)
+     [java] 11 - *DENISE PESSï¿½A (PT, 5.756 votos)
+     [java] 12 - *BOHN GASS (PT, 2.536 votos)
+     [java] 13 - MAURICIO MARCON (PODE, 2.366 votos)
+     [java] 14 - PEDRO WESTPHALEN (PP, 1.730 votos)
+     [java] 15 - AFONSO MOTTA (PDT, 1.367 votos)
+     [java] 16 - *FERNANDA MELCHIONNA (PSOL, 1.331 votos)
+     [java] 17 - *LUCAS REDECKER (PSDB, 731 votos)
+     [java] 18 - AFONSO HAMM (PP, 0 votos)
+     [java] 19 - MARCELO MORAES (PL, 0 votos)
+     [java] 20 - *ANY ORTIZ (CIDADANIA, 0 votos)
+     [java] 21 - *PAULO PIMENTA (PT, 0 votos)
+     [java] 22 - *ALEXANDRE LINDENMEYER (PT, 0 votos)
+     [java] 23 - *MARCON (PT, 0 votos)
+     [java] 24 - *MARIA DO ROSï¿½RIO (PT, 0 votos)
+     [java] 25 - DANRLEI DE DEUS GOLEIRO (PSD, 0 votos)
+     [java] 26 - *DAIANA SANTOS (PC do B, 0 votos)
+     [java] 27 - ALCEU MOREIRA (MDB, 0 votos)
+     [java] 28 - MARCIO BIOLCHI (MDB, 0 votos)
+     [java] 29 - OSMAR TERRA (MDB, 0 votos)
+     [java] 30 - HEITOR SCHUCH (PSB, 0 votos)
+     [java] 31 - FRANCIANE BAYER (REPUBLICANOS, 0 votos)
+     [java] 
+     [java] Candidatos mais votados (em ordem decrescente de votação e respeitando número de vagas):
+     [java] 1 - GIOVANI CHERINI (PL, 87.994 votos)
+     [java] 2 - TATIANA ARMOS (PSC, 82.276 votos)
+     [java] 3 - RENATO MOLLING (PP, 75.034 votos)
+     [java] 4 - CINTIA ROCKENBACH (PODE, 74.215 votos)
+     [java] 5 - COVATTI FILHO (PP, 71.779 votos)
+     [java] 6 - RENATO TOIGO (UNIï¿½O, 63.362 votos)
+     [java] 7 - PROFESSOR WAMBERT DI LORENZO (PTB, 59.988 votos)
+     [java] 8 - ANDREIA GREZZANA (PTB, 58.887 votos)
+     [java] 9 - POMPEO DE MATTOS (PDT, 58.251 votos)
+     [java] 10 - NADINE DUBAL (PODE, 53.483 votos)
+     [java] 11 - CARLOS GOMES (REPUBLICANOS, 52.375 votos)
+     [java] 12 - DALCISO OLIVEIRA (PSB, 48.776 votos)
+     [java] 13 - JULIANA BRIZOLA (PDT, 45.260 votos)
+     [java] 14 - LETICIA BONASSINA (REPUBLICANOS, 42.640 votos)
+     [java] 15 - *MARISOL SANTOS (PSDB, 40.124 votos)
+     [java] 16 - DR MARCOS (PP, 39.539 votos)
+     [java] 17 - BIBO NUNES (PL, 37.756 votos)
+     [java] 18 - MALU LOOSE (PSB, 36.791 votos)
+     [java] 19 - LINO ABEL (PODE, 33.874 votos)
+     [java] 20 - WAGNER PETRINI (PSB, 33.430 votos)
+     [java] 21 - MARCOS PEIXOTO (PP, 29.168 votos)
+     [java] 22 - PAOLA SALDIVIA (PATRIOTA, 27.980 votos)
+     [java] 23 - Sï¿½RGIO TURRA (PP, 26.790 votos)
+     [java] 24 - APOSTOLO JAIME (PSC, 25.586 votos)
+     [java] 25 - TENENTE CORONEL ZUCCO (REPUBLICANOS, 24.201 votos)
+     [java] 26 - DELEGADO FEDERAL LUCIANO LEDUR (PL, 22.359 votos)
+     [java] 27 - CORONEL MALABARBA (UNIï¿½O, 22.294 votos)
+     [java] 28 - *WELLINGTON MASCATE (PSDB, 18.045 votos)
+     [java] 29 - *DANIEL TRZECIAK DANIEL DA TV  (PSDB, 16.822 votos)
+     [java] 30 - SANDERSON (PL, 16.360 votos)
+     [java] 31 - PR OSï¿½AS COSTA (REPUBLICANOS, 14.520 votos)
+     [java] 
+     [java] Teriam sido eleitos se a votação fosse majoritária, e não foram eleitos:
+     [java] (com sua posição no ranking de mais votados)
+     [java] 2 - TATIANA ARMOS (PSC, 82.276 votos)
+     [java] 3 - RENATO MOLLING (PP, 75.034 votos)
+     [java] 4 - CINTIA ROCKENBACH (PODE, 74.215 votos)
+     [java] 6 - RENATO TOIGO (UNIï¿½O, 63.362 votos)
+     [java] 7 - PROFESSOR WAMBERT DI LORENZO (PTB, 59.988 votos)
+     [java] 8 - ANDREIA GREZZANA (PTB, 58.887 votos)
+     [java] 10 - NADINE DUBAL (PODE, 53.483 votos)
+     [java] 12 - DALCISO OLIVEIRA (PSB, 48.776 votos)
+     [java] 13 - JULIANA BRIZOLA (PDT, 45.260 votos)
+     [java] 14 - LETICIA BONASSINA (REPUBLICANOS, 42.640 votos)
+     [java] 15 - *MARISOL SANTOS (PSDB, 40.124 votos)
+     [java] 16 - DR MARCOS (PP, 39.539 votos)
+     [java] 18 - MALU LOOSE (PSB, 36.791 votos)
+     [java] 19 - LINO ABEL (PODE, 33.874 votos)
+     [java] 20 - WAGNER PETRINI (PSB, 33.430 votos)
+     [java] 21 - MARCOS PEIXOTO (PP, 29.168 votos)
+     [java] 22 - PAOLA SALDIVIA (PATRIOTA, 27.980 votos)
+     [java] 23 - Sï¿½RGIO TURRA (PP, 26.790 votos)
+     [java] 24 - APOSTOLO JAIME (PSC, 25.586 votos)
+     [java] 26 - DELEGADO FEDERAL LUCIANO LEDUR (PL, 22.359 votos)
+     [java] 27 - CORONEL MALABARBA (UNIï¿½O, 22.294 votos)
+     [java] 28 - *WELLINGTON MASCATE (PSDB, 18.045 votos)
+     [java] 31 - PR OSï¿½AS COSTA (REPUBLICANOS, 14.520 votos)
+     [java] 
+     [java] Eleitos, que se beneficiaram do sistema proporcional:
+     [java] (com sua posição no ranking de mais votados)
+     [java] 35 - BUSATO (UNIï¿½O, 13.017 votos)
+     [java] 46 - MARCEL VAN HATTEM (NOVO, 8.221 votos)
+     [java] 54 - *DENISE PESSï¿½A (PT, 5.756 votos)
+     [java] 70 - *BOHN GASS (PT, 2.536 votos)
+     [java] 72 - MAURICIO MARCON (PODE, 2.366 votos)
+     [java] 81 - PEDRO WESTPHALEN (PP, 1.730 votos)
+     [java] 87 - AFONSO MOTTA (PDT, 1.367 votos)
+     [java] 88 - *FERNANDA MELCHIONNA (PSOL, 1.331 votos)
+     [java] 97 - *LUCAS REDECKER (PSDB, 731 votos)
+     [java] 170 - AFONSO HAMM (PP, 0 votos)
+     [java] 182 - MARCELO MORAES (PL, 0 votos)
+     [java] 222 - *ANY ORTIZ (CIDADANIA, 0 votos)
+     [java] 225 - *PAULO PIMENTA (PT, 0 votos)
+     [java] 227 - *ALEXANDRE LINDENMEYER (PT, 0 votos)
+     [java] 241 - *MARCON (PT, 0 votos)
+     [java] 246 - *MARIA DO ROSï¿½RIO (PT, 0 votos)
+     [java] 265 - DANRLEI DE DEUS GOLEIRO (PSD, 0 votos)
+     [java] 294 - *DAIANA SANTOS (PC do B, 0 votos)
+     [java] 326 - ALCEU MOREIRA (MDB, 0 votos)
+     [java] 337 - MARCIO BIOLCHI (MDB, 0 votos)
+     [java] 338 - OSMAR TERRA (MDB, 0 votos)
+     [java] 442 - HEITOR SCHUCH (PSB, 0 votos)
+     [java] 498 - FRANCIANE BAYER (REPUBLICANOS, 0 votos)
+     [java] 
+     [java] Votaçao dos partidos e número de candidatos eleitos:
+     [java] 1 - PP - 11, 254.726 votos  (249.800 nominais e 4.926 de legenda), 3 candidatos eleitos
+     [java] 2 - PL - 22, 212.109 votos  (198.119 nominais e 13.990 de legenda), 4 candidatos eleitos
+     [java] 3 - REPUBLICANOS - 10, 180.678 votos  (173.777 nominais e 6.901 de legenda), 3 candidatos eleitos
+     [java] 4 - PODE - 19, 175.423 votos  (172.804 nominais e 2.619 de legenda), 1 candidato eleito
+     [java] 5 - PSB - 40, 160.272 votos  (153.695 nominais e 6.577 de legenda), 1 candidato eleito
+     [java] 6 - PTB - 14, 148.870 votos  (146.029 nominais e 2.841 de legenda), 0 candidato eleito
+     [java] 7 - UNIï¿½O - 44, 122.715 votos  (120.142 nominais e 2.573 de legenda), 1 candidato eleito
+     [java] 8 - PDT - 12, 122.371 votos  (117.231 nominais e 5.140 de legenda), 2 candidatos eleitos
+     [java] 9 - PSC - 20, 122.320 votos  (120.291 nominais e 2.029 de legenda), 0 candidato eleito
+     [java] 10 - PSDB - 45, 92.954 votos  (90.701 nominais e 2.253 de legenda), 2 candidatos eleitos
+     [java] 11 - PATRIOTA - 51, 74.267 votos  (72.834 nominais e 1.433 de legenda), 0 candidato eleito
+     [java] 12 - PT - 13, 33.400 votos  (18.450 nominais e 14.950 de legenda), 6 candidatos eleitos
+     [java] 13 - PSOL - 50, 13.797 votos  (12.501 nominais e 1.296 de legenda), 1 candidato eleito
+     [java] 14 - REDE - 18, 10.122 votos  (8.788 nominais e 1.334 de legenda), 0 candidato eleito
+     [java] 15 - NOVO - 30, 8.819 votos  (8.221 nominais e 598 de legenda), 1 candidato eleito
+     [java] 16 - AVANTE - 70, 2.762 votos  (2.593 nominais e 169 de legenda), 0 candidato eleito
+     [java] 17 - PSD - 55, 2.490 votos  (1.506 nominais e 984 de legenda), 1 candidato eleito
+     [java] 18 - SOLIDARIEDADE - 77, 2.036 votos  (623 nominais e 1.413 de legenda), 0 candidato eleito
+     [java] 19 - CIDADANIA - 23, 998 votos  (0 nominais e 998 de legenda), 1 candidato eleito
+     [java] 20 - PRTB - 28, 955 votos  (794 nominais e 161 de legenda), 0 candidato eleito
+     [java] 21 - PV - 43, 763 votos  (301 nominais e 462 de legenda), 0 candidato eleito
+     [java] 22 - DC - 27, 715 votos  (202 nominais e 513 de legenda), 0 candidato eleito
+     [java] 23 - PROS - 90, 534 votos  (0 nominais e 534 de legenda), 0 candidato eleito
+     [java] 24 - PC do B - 65, 484 votos  (0 nominais e 484 de legenda), 1 candidato eleito
+     [java] 25 - AGIR - 36, 286 votos  (0 nominais e 286 de legenda), 0 candidato eleito
+     [java] 26 - MDB - 15, 0 votos  (0 nominais e 0 de legenda), 3 candidatos eleitos
+     [java] 27 - PSTU - 16, 0 votos  (0 nominais e 0 de legenda), 0 candidato eleito
+     [java] 28 - UP - 80, 0 votos  (0 nominais e 0 de legenda), 0 candidato eleito
+     [java] 29 - PCB - 21, 0 votos  (0 nominais e 0 de legenda), 0 candidato eleito
+     [java] 30 - PCO - 29, 0 votos  (0 nominais e 0 de legenda), 0 candidato eleito
+     [java] 
+     [java] Primeiro e último colocados de cada partido:
+     [java] 1 - PL - 22, GIOVANI CHERINI (2222, 87.994 votos) / MAURO ALMEIDA (2205, 0 votos)
+     [java] 2 - PSC - 20, TATIANA ARMOS (2023, 82.276 votos) / Zï¿½ ROBERTO (2055, 0 votos)
+     [java] 3 - PP - 11, RENATO MOLLING (1122, 75.034 votos) / LAERCIO THADEU (1156, 0 votos)
+     [java] 4 - PODE - 19, CINTIA ROCKENBACH (1919, 74.215 votos) / SILVIA SCHIRRMANN DOCE RECADO (1929, 0 votos)
+     [java] 5 - UNIï¿½O - 44, RENATO TOIGO (4404, 63.362 votos) / RICARDO MONTANA (4407, 0 votos)
+     [java] 6 - PTB - 14, PROFESSOR WAMBERT DI LORENZO (1422, 59.988 votos) / AMINIE P J C S (1404, 0 votos)
+     [java] 7 - PDT - 12, POMPEO DE MATTOS (1212, 58.251 votos) / DR. FELIPE (1201, 0 votos)
+     [java] 8 - REPUBLICANOS - 10, CARLOS GOMES (1010, 52.375 votos) / VIGILANTE REGINALDO MORAIS (1072, 0 votos)
+     [java] 9 - PSB - 40, DALCISO OLIVEIRA (4040, 48.776 votos) / CASSIANO FONTANA (4013, 0 votos)
+     [java] 10 - PSDB - 45, MARISOL SANTOS (4567, 40.124 votos) / CADORE (4510, 0 votos)
+     [java] 11 - PATRIOTA - 51, PAOLA SALDIVIA (5151, 27.980 votos) / ESTER MENEGUZZI (5121, 0 votos)
+     [java] 12 - PSOL - 50, CLï¿½UDIA ï¿½VILA (5013, 9.153 votos) / PATY REX (5033, 0 votos)
+     [java] 13 - REDE - 18, JULIO MOURA (1818, 8.788 votos) / VIVI PEREIRA (1813, 0 votos)
+     [java] 14 - NOVO - 30, MARCEL VAN HATTEM (3030, 8.221 votos) / HENRIQUE LIMA (3038, 0 votos)
+     [java] 15 - PT - 13, TEREZA FUJII (1313, 6.518 votos) / EDUARDO MANIQUE (1331, 0 votos)
+     [java] 16 - AVANTE - 70, PAULA ALMEIDA (7088, 1.026 votos) / TEN. MARCOS ROCHA (7033, 0 votos)
+     [java] 17 - PSD - 55, PAULO CALEFFI (5555, 686 votos) / TERESINHA MATOS (5567, 0 votos)
+     [java] 18 - PRTB - 28, ADEMAR MORAES (2822, 496 votos) / CRIS PEREIRA (2899, 0 votos)
+     [java] 19 - SOLIDARIEDADE - 77, JORGINHO TREZE FUTSAL (7713, 433 votos) / JEFFERSON TIEGO (7777, 0 votos)
+     [java] 20 - PV - 43, CRIS MORAES (4343, 301 votos) / VANIA GOLDENBERG (4333, 0 votos)
+     [java] 21 - DC - 27, Zï¿½ LUIZ (2723, 117 votos) / RAQUEL MORSCH (2701, 0 votos)
+     [java] 22 - PC do B - 65, MARIA RITA (6554, 0 votos) / ASSIS MELO (6510, 0 votos)
+     [java] 23 - MDB - 15, MARCIO BIOLCHI (1520, 0 votos) / Yï¿½ (1501, 0 votos)
+     [java] 24 - PSTU - 16, PROFESSOR GILLI (1600, 0 votos) / NIKAYA VIDOR (1616, 0 votos)
+     [java] 25 - UP - 80, PRISCILA VOIGT (8080, 0 votos) / CARLOS VIEIRA (8000, 0 votos)
+     [java] 26 - PCB - 21, JUH GUERRA (2121, 0 votos) / HUNO (2101, 0 votos)
+     [java] 27 - CIDADANIA - 23, CAUDURO PROFESSOR (2311, 0 votos) / LUIZ JACOMINI (2345, 0 votos)
+     [java] 28 - PROS - 90, FILIPE MACHADO (9007, 0 votos) / ALE FERNANDES (9001, 0 votos)
+     [java] 29 - AGIR - 36, KAROL MEGGIATTO (3655, 0 votos) / KAROL MEGGIATTO (3655, 0 votos)
+     [java] 
+     [java] Eleitos, por faixa etária (na data da eleição):
+     [java]       Idade < 30: 0 (0,00%)
+     [java] 30 <= Idade < 40: 8 (25,81%)
+     [java] 40 <= Idade < 50: 6 (19,35%)
+     [java] 50 <= Idade < 60: 6 (19,35%)
+     [java] 60 <= Idade     : 11 (35,48%)
+     [java] 
+     [java] Eleitos, por gênero:
+     [java] Feminino:  6 (19,35%)
+     [java] Masculino: 25 (80,65%)
+     [java] 
+     [java] Total de votos válidos:    1.744.866
+     [java] Total de votos nominais:   1.669.402 (95,68%)
+     [java] Total de votos de legenda: 75.464 (4,32%)
+     [java] 
+
+BUILD SUCCESSFUL
+Total time: 3 seconds

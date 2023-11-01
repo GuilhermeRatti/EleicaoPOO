@@ -31,7 +31,7 @@ public class App {
         DateTimeFormatter formatter = DateTimeFormatter.ofPattern("dd/MM/yyyy");
         LocalDate data = LocalDate.parse(dataStr, formatter);
         
-        Eleicao eleicao = new Eleicao(tipoDeCargo.FEDERAL);
+        Eleicao eleicao = new Eleicao(tipo, data);
 
         List<String> colsArqCand = new ArrayList<String>();
         colsArqCand.add("CD_CARGO");
