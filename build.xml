@@ -29,8 +29,8 @@ normal.">
 
 <java fork="yes" classname="${mainClass}">
 <arg value="--federal" />
-<arg value="files/consulta_cand_2022_ES.csv" />
-<arg value="files/votacao_secao_2022_ES.csv" />
+<arg value="candidatos.csv" />
+<arg value="votacao.csv" />
 <arg value="02/10/2022" />
 <classpath>
 <pathelement path="${bin}" />
@@ -43,8 +43,8 @@ modo normal.">
 
 <java fork="yes" classname="${mainClass}">
 <arg value="--estadual" />
-<arg value="files/consulta_cand_2022_ES.csv" />
-<arg value="files/votacao_secao_2022_ES.csv" />
+<arg value="candidatos.csv" />
+<arg value="votacao.csv" />
 <arg value="02/10/2022" />
 <classpath>
 <pathelement path="${bin}" />

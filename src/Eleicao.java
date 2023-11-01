@@ -101,7 +101,7 @@ public class Eleicao {
     }
 
     public void printaNumeroDeVagas() {
-        System.out.println("Numero de Vagas: " + this.numeroDeVagas + "\n");
+        System.out.println("Número de Vagas: " + this.numeroDeVagas + "\n");
     }
 
     public void printaRelatorio1() {

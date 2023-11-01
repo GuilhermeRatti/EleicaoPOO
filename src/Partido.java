@@ -76,7 +76,12 @@ public class Partido {
                 String.format("%,d", this.qtdVotosLegenda + this.qtdVotosNominais).replace(',', '.') + " votos " +
                 " (" + String.format("%,d", this.qtdVotosNominais).replace(',', '.') + " nominais e "
                 + String.format("%,d", this.qtdVotosLegenda).replace(',', '.') + " de legenda), " +
-                this.getQtdCandEleitos() + " candidatos eleitos";
+                this.getQtdCandEleitos();
+
+        if (this.getQtdCandEleitos() > 1) {
+            msg += " candidatos eleitos";
+        } else
+            msg += " candidato eleito";
 
         return msg;
     }
@@ -94,10 +99,10 @@ class ComparadorDeVotos implements java.util.Comparator<Partido> {
     public int compare(Partido arg0, Partido arg1) {
         return arg1.getCandidatoMaisVotado().getQtdVotos() - arg0.getCandidatoMaisVotado().getQtdVotos();
     }
-    
+
 }
 
-class ComparadorDePartidosPorCandidatoMaisVotado implements java.util.Comparator<Partido>{
+class ComparadorDePartidosPorCandidatoMaisVotado implements java.util.Comparator<Partido> {
     @Override
     public int compare(Partido arg0, Partido arg1) {
         return arg1.getCandidatoMaisVotado().getQtdVotos() - arg0.getCandidatoMaisVotado().getQtdVotos();
