@@ -22,7 +22,7 @@ public class CsvReader {
         for(String col : columns){
             try {
                 if (linhaArray[this.headerIndices.get(col)] == null) {
-                    System.out.println("ERa isso meixmo");
+                    System.out.println("Existem colunas faltantes no arquivo csv.");
                     System.exit(1);
                 }
                 else if (col.startsWith("NR") || col.startsWith("QT") || col.startsWith("CD")) {

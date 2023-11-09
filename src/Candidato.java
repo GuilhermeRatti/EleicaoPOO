@@ -83,9 +83,16 @@ public abstract class Candidato {
         String asterisco = "";
         if(this.numFederacao!=-1)  asterisco = "*";
 
+        String flexaoDeVoto = null;
+        if(this.qtdVotos > 1) {
+            flexaoDeVoto = " votos)";
+        } else {
+            flexaoDeVoto = " voto)";
+        }
+
         String msg = asterisco + this.nomeUrna + 
                     " (" + this.partido.getSigla() + ", " +
-                    String.format("%,d",this.qtdVotos).replace(',', '.') + " votos)";
+                    String.format("%,d",this.qtdVotos).replace(',', '.') + flexaoDeVoto;
         return msg;
     }
 }

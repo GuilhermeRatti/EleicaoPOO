@@ -78,9 +78,23 @@ public class Partido {
 
     @Override
     public String toString() {
+        String flexaoDeVotoTotal = null;
+        if (this.getQtdTotalDeVotos() > 1) {
+            flexaoDeVotoTotal = " votos ";
+        } else { 
+            flexaoDeVotoTotal = " voto ";
+        }
+
+        String flexaoDeVotoNominal = null;
+        if (this.qtdVotosNominais > 1) {
+            flexaoDeVotoNominal = " nominais e ";
+        } else {
+            flexaoDeVotoNominal = " nominal e ";
+        }
+
         String msg = this.sigla + " - " + this.numPartido + ", " +
-                String.format("%,d", this.qtdVotosLegenda + this.qtdVotosNominais).replace(',', '.') + " votos " +
-                " (" + String.format("%,d", this.qtdVotosNominais).replace(',', '.') + " nominais e "
+                String.format("%,d", this.qtdVotosLegenda + this.qtdVotosNominais).replace(',', '.') + flexaoDeVotoTotal +
+                "(" + String.format("%,d", this.qtdVotosNominais).replace(',', '.') + flexaoDeVotoNominal
                 + String.format("%,d", this.qtdVotosLegenda).replace(',', '.') + " de legenda), " +
                 this.getQtdCandEleitos();
 
@@ -96,6 +110,9 @@ public class Partido {
 class ComparadorDePartidos implements java.util.Comparator<Partido> {
     @Override
     public int compare(Partido arg0, Partido arg1) {
+        if (arg1.getQtdTotalDeVotos() - arg0.getQtdTotalDeVotos() == 0) {
+            return arg0.getNumPartido() - arg1.getNumPartido();
+        }
         return arg1.getQtdTotalDeVotos() - arg0.getQtdTotalDeVotos();
     }
 }

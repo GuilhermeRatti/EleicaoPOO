@@ -32,11 +32,6 @@ public class Eleicao {
             return;
 
         if (linhaConvertida.size() > 3) {
-
-            if (!(this.tipo == tipoDeCargo.ESTADUAL && (int) linhaConvertida.get("CD_CARGO") == 7 ||
-                    this.tipo == tipoDeCargo.FEDERAL && (int) linhaConvertida.get("CD_CARGO") == 6))
-                return;
-
             Partido pt = partidos.get((Integer) linhaConvertida.get("NR_PARTIDO"));
             if (pt == null) {
                 Partido partido = new Partido((String) linhaConvertida.get("SG_PARTIDO"),
@@ -44,6 +39,10 @@ public class Eleicao {
                 partidos.put((Integer) linhaConvertida.get("NR_PARTIDO"), partido);
                 pt = partido;
             }
+
+            if (!(this.tipo == tipoDeCargo.ESTADUAL && (int) linhaConvertida.get("CD_CARGO") == 7 ||
+                    this.tipo == tipoDeCargo.FEDERAL && (int) linhaConvertida.get("CD_CARGO") == 6))
+                return;
 
             if (!((int) linhaConvertida.get("CD_SITUACAO_CANDIDATO_TOT") == 2 ||
                     (int) linhaConvertida.get("CD_SITUACAO_CANDIDATO_TOT") == 16) &&
@@ -105,15 +104,22 @@ public class Eleicao {
     }
 
     public void printaNumeroDeVagas() {
-        System.out.println("Número de Vagas: " + this.numeroDeVagas + "\n");
+        System.out.println("Número de vagas: " + this.numeroDeVagas + "\n");
     }
 
     public void printaRelatorio1() {
         if (this.candidatosOrdenados == null)
             this.ordenaCandidatos();
 
+        String tipoDeDeputados = null;
+        if(this.tipo == tipoDeCargo.ESTADUAL) {
+            tipoDeDeputados = "estaduais";
+        } else {
+            tipoDeDeputados = "federais";
+        }
+
         int i = 0;
-        System.out.println("Deputados estaduais eleitos: ");
+        System.out.println("Deputados " + tipoDeDeputados + " eleitos:");
         for (Candidato c : this.candidatosOrdenados) {
             if (i == this.numeroDeVagas)
                 break;
@@ -174,7 +180,7 @@ public class Eleicao {
         if (this.partidosOrdenados == null)
             this.ordenaPartidos();
 
-        System.out.println("Votaçao dos partidos e número de candidatos eleitos:");
+        System.out.println("Votação dos partidos e número de candidatos eleitos:");
         int i = 0;
         for (Partido p : this.partidosOrdenados) {
             System.out.println((i + 1) + " - " + p);
@@ -201,12 +207,25 @@ public class Eleicao {
     }
 
     public void formatacaoRelatorio6(Partido p, int i) {
+        String flexaoDeVotosCandMaisVotado = null;
+        if(p.getCandidatoMaisVotado().getQtdVotos() > 1) {
+            flexaoDeVotosCandMaisVotado = " votos) / ";
+        } else {
+            flexaoDeVotosCandMaisVotado = " voto) / ";
+        }
+        String flexaoDeVotosCandMenosVotado = null;
+        if(p.getCandidatoMenosVotado().getQtdVotos() > 1) {
+            flexaoDeVotosCandMenosVotado = " votos)";
+        } else {
+            flexaoDeVotosCandMenosVotado = " voto)";
+        }
+
         String msg = i + " - " + p.getSigla() + " - " + p.getNumPartido() + ", "
                 + p.getCandidatoMaisVotado().getNomeUrna() + " (" + p.getCandidatoMaisVotado().getNumCandidato() + ", "
-                + String.format("%,d", p.getCandidatoMaisVotado().getQtdVotos()).replace(',', '.') + " votos) / "
+                + String.format("%,d", p.getCandidatoMaisVotado().getQtdVotos()).replace(',', '.') + flexaoDeVotosCandMaisVotado
                 + p.getCandidatoMenosVotado().getNomeUrna()
                 + " (" + p.getCandidatoMenosVotado().getNumCandidato() + ", "
-                + String.format("%,d", p.getCandidatoMenosVotado().getQtdVotos()).replace(',', '.') + " votos)";
+                + String.format("%,d", p.getCandidatoMenosVotado().getQtdVotos()).replace(',', '.') + flexaoDeVotosCandMenosVotado;
         System.out.println(msg);
     }
 
