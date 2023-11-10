@@ -1,3 +1,4 @@
+import java.time.LocalDate;
 import java.util.ArrayList;
 import java.util.List;
 
@@ -8,6 +9,7 @@ public class Partido {
     private int qtdVotosNominais;
     private int qtdVotosLegenda;
     private boolean estaOrdenado;
+    
 
     public Partido(String sigla, int numPartido) {
         this.sigla = sigla;
@@ -58,18 +60,48 @@ public class Partido {
     }
 
     public Candidato getCandidatoMaisVotado() {
-
         if (!this.estaOrdenado) {
             this.ordenaCandidatosDoPartido();
         }
-        return this.candidatos.get(0);
+
+        // Pegando o candidato mais votado, sendo a data de nascimento o criterio de desempate (candidato mais velho)
+        Candidato candMaisVotado = this.candidatos.get(0);
+        LocalDate dataNascCandMaisVotado = candMaisVotado.getDataNascimento();
+        for(int i=1; i<this.candidatos.size(); i++) {
+            if(this.candidatos.get(i).getQtdVotos() == candMaisVotado.getQtdVotos()) {
+                if(this.candidatos.get(i).getDataNascimento().isBefore(dataNascCandMaisVotado)) {
+                    candMaisVotado = this.candidatos.get(i);
+                    dataNascCandMaisVotado = candMaisVotado.getDataNascimento();
+                }
+            }
+            else {
+                break;
+            }
+        }
+
+        return candMaisVotado;
     }
 
     public Candidato getCandidatoMenosVotado() {
         if (!this.estaOrdenado) {
             this.ordenaCandidatosDoPartido();
         }
-        return this.candidatos.get(this.candidatos.size() - 1);
+
+        // Pegando o candidato menos votado, sendo a data de nascimento o criterio de desempate (candidato mais novo)
+        Candidato candMenosVotado = this.candidatos.get(this.candidatos.size() - 1);
+        LocalDate dataNascCandMenosVotado = candMenosVotado.getDataNascimento();
+        for(int i=this.candidatos.size()-2; i>=0; i--) {
+            if(this.candidatos.get(i).getQtdVotos() == candMenosVotado.getQtdVotos()) {
+                if(this.candidatos.get(i).getDataNascimento().isAfter(dataNascCandMenosVotado)) {
+                    candMenosVotado = this.candidatos.get(i);
+                    dataNascCandMenosVotado = candMenosVotado.getDataNascimento();
+                }
+            }
+            else {
+                break;
+            }
+        }
+        return candMenosVotado;
     }
 
     public int getQtdDeCandidatos() {
